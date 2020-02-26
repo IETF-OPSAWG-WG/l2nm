@@ -176,15 +176,19 @@ typedef protocols-type {
     }
     enum "SR" {
      value 3;
-     description "Operational status Segment Routing";
+     description "Transport based on Segment Routing";
     }
-    enum "TE" {
+    enum "SR-TE" {
      value 4;
-     description "Operational status TE";
+     description "Transport based on Segment Routing for Traffic E";
+    }
+    enum "RSVP-TE" {
+     value 5;
+     description "Transport based on RSVP for Traffic Engineering";
     }
     enum "unknown" {
-     value 5;
-     description "Operational status UNKNOWN";
+     value 6;
+     description "Transport UNKNOWN";
     }
 
   }

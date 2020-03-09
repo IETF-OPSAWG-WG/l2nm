@@ -331,7 +331,7 @@
       separate functional components called "Service Orchestration", "Network
       Orchestration", and "Domain Orchestration".</t>
 
-      The reader may refer to <xref target="RFC8309"/> for the distinction between the
+      <t>The reader may refer to <xref target="RFC8309"/> for the distinction between the
       "Customer Service Model", the "Service Delivery Model", the "Network
       Configuration Model", and the "Device Configuration Model". The "Domain Orchestration"
        and "Config Manager" roles may be performed by "SDN Controllers".</t>
@@ -1062,6 +1062,11 @@ prefix l2vpn;
 import ietf-l3vpn-ntw {
 prefix l3vpn;
 }
+import ietf-routing-types {
+    prefix rt-types;
+    reference
+      "RFC 8294: Common YANG Data Types for the Routing Area";
+  }
 organization
  "IETF OPSA (Operations and Management Area) Working Group";
 contact
@@ -1907,7 +1912,7 @@ description
 identity hub-role {
 base site-role;
 description
-"Hub Site in a Hub &amp Spoke IPVPN.";
+"Hub Site in a Hub and Spoke IPVPN.";
 }
 identity pm-type {
 description
@@ -2295,6 +2300,59 @@ identity urllc {
    "Identifies the Backup L2VPN.";
  }
 /* Groupings */
+
+
+grouping vpn-route-targets {
+    description
+      "A grouping that specifies Route Target import-export rules
+       used in a BGP-enabled VPN.";
+    list vpn-target {
+      key "id";
+      leaf id {
+        type int8;
+        description
+          "Identifies each VPN Target";
+      }
+      list route-targets {
+        key "route-target";
+        leaf route-target {
+          type rt-types:route-target;
+          description
+            "Route Target value";
+        }
+        description
+          "List of Route Targets.";
+      }
+      leaf route-target-type {
+        type rt-types:route-target-type;
+        mandatory true;
+        description
+          "Import/export type of the Route Target.";
+      }
+      description
+        "l3vpn route targets. AND/OR Operations are available
+         based on the RTs assigment";
+    }
+    reference
+      "RFC4364: BGP/MPLS IP Virtual Private Networks (VPNs)
+       RFC4664: Framework for Layer 2 Virtual Private Networks
+       (L2VPNs)";
+    container vpn-policies {
+      description
+        "";
+      leaf import-policy {
+          type string;
+        description
+          "Reference to a VRF import policy.";
+      }
+      leaf export-policy {
+          type string;
+        description
+          "Reference to a VRF export policy.";
+      }
+    }
+  }
+
 
 grouping svc-transport-encapsulation {
  container transport-encapsulation {
@@ -4977,7 +5035,7 @@ list vpn-node {
     "NE IP address";
   }
 
-  uses l3vpn:vpn-route-targets;
+uses vpn-route-targets;
 
 container vpn-network-accesses {
 list vpn-network-access {

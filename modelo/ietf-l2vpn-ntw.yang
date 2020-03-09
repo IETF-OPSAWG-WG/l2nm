@@ -848,7 +848,7 @@ description
 identity hub-role {
 base site-role;
 description
-"Hub Site in a Hub &amp Spoke IPVPN.";
+"Hub Site in a Hub and Spoke IPVPN.";
 }
 identity pm-type {
 description

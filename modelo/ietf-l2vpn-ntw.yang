@@ -12,7 +12,6 @@ prefix yang;
 import ietf-netconf-acm {
 prefix nacm;
 }
-
 import ietf-l3vpn-ntw {
 prefix l3vpn;
 }
@@ -26,9 +25,31 @@ contact
                  <mailto:oscar.gonzalezdedios@telefonica.com>
 ";
 description
-"The YANG module defines a generic network configuration
-model for Layer 2 VPN services common across all of the
-vendor implementations.";
+      "The YANG module defines a generic network configuration
+      model for Layer 2 VPN services common across all of the
+      vendor implementations.
+      
+      Copyright (c) 2020 IETF Trust and the persons identified as
+      authors of the code.  All rights reserved.
+    
+     Redistribution and use in source and binary forms, with or
+     without modification, is permitted pursuant to, and subject to
+     the license terms contained in, the Simplified BSD License set
+     forth in Section 4.c of the IETF Trust's Legal Provisions
+     Relating to IETF Documents
+     (https://trustee.ietf.org/license-info).
+
+     This version of this YANG module is part of RFC XXXX
+     (https://www.rfc-editor.org/info/rfcXXXX); see the RFC itself
+     for full legal notices.";
+
+revision 2020-03-09{
+description
+"Second revision -01 version";
+reference
+"draft-barguil-opsawg-l2sm-l2nm-01
+A Layer 2 VPN Network Yang Model.";
+}
 
 revision 2019-11-21{
 description
@@ -37,6 +58,7 @@ reference
 "draft-barguil-opsawg-l2sm-l2nm-00
 A Layer 2 VPN Network Yang Model.";
 }
+
 /* Features */
 feature multicast-like{
 description
@@ -1241,26 +1263,6 @@ grouping split-horizon-group {
  }
 description
 "Configuration with split horizon enabled";
-}
-
-grouping status-params {
-  container status {
-    leaf admin-enabled {
-      type boolean;
-      description
-      "Administrative Status UP/DOWN";
-    }
-    leaf oper-status {
-      type operational-type;
-      config false;
-      description
-      "Operations status";
-    }
-    description "";
-  }
-  description
-  "Grouping used to join operational and administrative status
-  is re used in the Site Network Acess and in the VPN-Node";
 }
 
 grouping site-bearer-params {
@@ -3882,7 +3884,7 @@ description
 description
 "Container of L2CP control global configurations";
 }*/
-uses status-params;
+uses l3vpn:status-timestamp;
 uses site-service;
 uses vpn-service-multicast;
 uses vpn-extranet;
@@ -3950,7 +3952,7 @@ maximum frame size,When a frame is larger than the MTU, it is
 broken down, or fragmented, into smaller pieces by the network protocol
 to accommodate the MTU of the network";
 }
-uses status-params;
+uses l3vpn:status-timestamp;
 uses access-diversity;
 uses ethernet-connection-grouping;
 uses availability-grouping;

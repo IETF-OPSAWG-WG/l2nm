@@ -12,9 +12,8 @@ module: ietf-l2vpn-ntw
            +--rw vpn-svc-type?               identityref
            +--rw customer-name?              string
            +--rw svc-topo?                   identityref
-           +--rw status
-           |  +--rw admin-enabled?   boolean
-           |  +--ro oper-status?     operational-type
+           +--rw status?                     operational-type
+           +--rw timestamp?                  yang:date-and-time
            +--rw multicast-like {multicast-like}?
            |  +--rw enabled?                     boolean
            |  +--rw customer-tree-flavors
@@ -39,6 +38,15 @@ module: ietf-l2vpn-ntw
                  +--rw description?            string
                  +--rw node-role?              identityref
                  +--rw ne-id                   string
+                 +--rw vpn-target* [id]
+                 |  +--rw id                   int8
+                 |  +--rw route-targets* [route-target]
+                 |  |  +--rw route-target    rt-types:route-target
+                 |  +--rw route-target-type
+                 |          rt-types:route-target-type
+                 +--rw vpn-policies
+                 |  +--rw import-policy?   leafref
+                 |  +--rw export-policy?   leafref
                  +--rw vpn-network-accesses
                     +--rw vpn-network-access* [network-access-id]
                        +--rw network-access-id
@@ -49,9 +57,10 @@ module: ietf-l2vpn-ntw
                        |       string
                        +--rw Interface-mtu?
                        |       uint32
-                       +--rw status
-                       |  +--rw admin-enabled?   boolean
-                       |  +--ro oper-status?     operational-type
+                       +--rw status?
+                       |       operational-type
+                       +--rw timestamp?
+                       |       yang:date-and-time
                        +--rw access-diversity {site-diversity}?
                        |  +--rw groups
                        |  |  +--rw fate-sharing-group-size?   uint16

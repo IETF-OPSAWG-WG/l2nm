@@ -15,7 +15,11 @@ prefix nacm;
 import ietf-l3vpn-ntw {
 prefix l3vpn;
 }
-
+import ietf-routing-types {
+    prefix rt-types;
+    reference
+      "RFC 8294: Common YANG Data Types for the Routing Area";
+  }
 organization
  "IETF OPSA (Operations and Management Area) Working Group";
 contact
@@ -1277,16 +1281,12 @@ grouping vpn-route-targets {
       description
         "";
       leaf import-policy {
-        type leaf {
           type string;
-        }
         description
           "Reference to a VRF import policy.";
       }
       leaf export-policy {
-        type leaf {
           type string;
-        }
         description
           "Reference to a VRF export policy.";
       }

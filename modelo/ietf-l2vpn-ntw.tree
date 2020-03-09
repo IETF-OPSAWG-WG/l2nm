@@ -45,8 +45,8 @@ module: ietf-l2vpn-ntw
                  |  +--rw route-target-type
                  |          rt-types:route-target-type
                  +--rw vpn-policies
-                 |  +--rw import-policy?   leafref
-                 |  +--rw export-policy?   leafref
+                 |  +--rw import-policy?   string
+                 |  +--rw export-policy?   string
                  +--rw vpn-network-accesses
                     +--rw vpn-network-access* [network-access-id]
                        +--rw network-access-id

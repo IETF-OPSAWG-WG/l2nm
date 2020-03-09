@@ -12,6 +12,11 @@ prefix yang;
 import ietf-netconf-acm {
 prefix nacm;
 }
+
+import ietf-l3vpn-ntw {
+prefix l3vpn;
+}
+
 organization
  "IETF OPSA (Operations and Management Area) Working Group";
 contact
@@ -3910,6 +3915,9 @@ list vpn-node {
     description
     "NE IP address";
   }
+
+  uses l3vpn:vpn-route-targets;
+
 container vpn-network-accesses {
 list vpn-network-access {
 key "network-access-id";

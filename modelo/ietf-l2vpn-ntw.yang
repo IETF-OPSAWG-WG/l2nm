@@ -23,6 +23,12 @@ module ietf-l2vpn-ntw {
     reference
       "RFC NNNN: A Layer 3 VPN Network YANG Model";
   }
+  import ietf-packet-fields {
+    prefix pf;
+    reference
+      "RFC 8519 - YANG Data Model for Network Access Control
+                  Lists (ACLs).";
+  }
   import ietf-routing-types {
     prefix rt-types;
     reference
@@ -65,7 +71,7 @@ module ietf-l2vpn-ntw {
 
   /* Features */
 
-  feature multicast-like {
+ feature multicast-like {
     description
       "Indicates the support of multicast-like capabilities in a L2VPN.";
   }
@@ -3668,7 +3674,7 @@ module ietf-l2vpn-ntw {
         description
           "PCP value";
       }
-      leaf src-mac {
+      /*leaf src-mac {
         type yang:mac-address;
         description
           "Source MAC";
@@ -3677,7 +3683,8 @@ module ietf-l2vpn-ntw {
         type yang:mac-address;
         description
           "Destination MAC";
-      }
+      }*/
+      uses pf:acl-eth-header-fields;
       leaf color-type {
         type identityref {
           base color-type;
@@ -3762,16 +3769,7 @@ module ietf-l2vpn-ntw {
                   description
                     "PCP value.";
                 }
-                leaf src-mac {
-                  type yang:mac-address;
-                  description
-                    "Source MAC";
-                }
-                leaf dst-mac {
-                  type yang:mac-address;
-                  description
-                    "Destination MAC.";
-                }
+                uses pf:acl-eth-header-fields;
                 leaf color-type {
                   type identityref {
                     base color-type;

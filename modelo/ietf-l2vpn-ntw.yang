@@ -19,7 +19,7 @@ import ietf-routing-types {
     prefix rt-types;
     reference
       "RFC 8294: Common YANG Data Types for the Routing Area";
-  }
+}
 organization
  "IETF OPSA (Operations and Management Area) Working Group";
 contact

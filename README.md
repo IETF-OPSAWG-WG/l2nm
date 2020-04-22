@@ -16,4 +16,4 @@ This document defines a YANG Data model (called, L2NM) that can be
 
 | **Master**  
 |:---:|
-| [![Build Status](https://travis-ci.com/github/oscargdd/l2nm.svg?branch=master)](https://travis-ci.com/github/oscargdd/l2nm.svg?branch=master) |
+| [![Build Status](https://travis-ci.com/oscargdd/l2nm.svg?branch=master)](https://travis-ci.com/oscargdd/l2nm.svg?branch=master) |

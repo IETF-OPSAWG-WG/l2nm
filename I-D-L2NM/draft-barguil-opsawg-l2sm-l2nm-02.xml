@@ -197,7 +197,7 @@
       </address>
     </author>
 
-    <author fullname="Jichun Ma" initials="L.J." surname="Jalil">
+    <author fullname="Jichun Ma" initials="J.M" surname="Ma">
       <organization>China Unicom</organization>
 
       <address>
@@ -1143,9 +1143,9 @@ module ietf-l2vpn-ntw {
      (https://www.rfc-editor.org/info/rfcXXXX); see the RFC itself
      for full legal notices.";
 
-  revision 2020-03-20 {
+  revision 2020-04-23 {
     description
-      "Second revision -01 version";
+      "Third revision -02 version";
     reference
       "RFC XXXX: A Layer 2 VPN Network YANG Model.";
   }
@@ -1165,7 +1165,8 @@ module ietf-l2vpn-ntw {
 
   feature target-sites {
     description
-      "Indicates the support of 'target-sites' match flow parameter.";
+      "Indicates the support of 'target-sites' match flow
+       parameter.";
   }
 
   feature l2cp-control {
@@ -1175,12 +1176,14 @@ module ietf-l2vpn-ntw {
 
   feature input-bw {
     description
-      "Indicates the suppport of Input Bandwidth in a VPN.";
+      "Indicates the suppport of Input Bandwidth
+      in a VPN.";
   }
 
   feature output-bw {
     description
-      "Indicates the support of Output Bandwidth in a VPN";
+      "Indicates the support of Output Bandwidth in
+       a VPN";
   }
 
   feature uni-list {
@@ -1216,7 +1219,8 @@ module ietf-l2vpn-ntw {
 
   feature site-diversity {
     description
-      "Indicates the support of site diversity constraints in a VPN.";
+      "Indicates the support of site diversity constraints in
+       a VPN.";
   }
 
   feature encryption {
@@ -1631,9 +1635,9 @@ module ietf-l2vpn-ntw {
   identity ldp-l2tp-vpls {
     base service-type;
     description
-      "LDP based or L2TP based multipoint Virtual Private LAN services
-       (VPLS) Service Type. This VPLS uses LDP-signaled Pseudowires or
-       L2TP signaled Pseudowires.";
+      "LDP based or L2TP based multipoint Virtual Private LAN
+       services (VPLS) Service Type. This VPLS uses LDP-signaled
+       Pseudowires or L2TP signaled Pseudowires.";
   }
 
   identity bgp-vpls {
@@ -1661,8 +1665,8 @@ module ietf-l2vpn-ntw {
   identity bundling-type {
     description
       "This is base identity for Bundling type. It supports
-       multiple CE-VLAN associated with L2VPN service or all CE-VLANs
-       associated with L2VPN service.";
+       multiple CE-VLAN associated with L2VPN service or all
+       CE-VLANs associated with L2VPN service.";
   }
 
   identity multi-svc-bundling {
@@ -2722,9 +2726,8 @@ module ietf-l2vpn-ntw {
         }
         leaf location {
           type leafref {
-            path "/l2vpn-ntw/sites/site/locations/location/location-id
-REVISAR
-";
+            path "/l2vpn-ntw/sites/site/locations/location/" +
+                 "location-id";
           }
           description
             "Site name";
@@ -3208,14 +3211,6 @@ REVISAR
             description
               "VC lable used to identify PW.";
           }
-          /*leaf ac-group-id {
-          type leafref{
-          path "../../../../../vpn-network-accesses/"+
-          "vpn-network-access/access-diversity/groups/group/group-id";
-          }
-          description
-          "Reference to Network Access Group ID.";
-          }*/
           leaf pw-type {
             type identityref {
               base pw-topo-type;
@@ -3257,7 +3252,7 @@ REVISAR
       container l2tp-pwe {
         when "../type = 'l2tp'" {
           description
-            "Only applies when vpn signaling type is L2TP protocol.";
+            "Applies when vpn signaling type is L2TP protocol.";
         }
         leaf type {
           type identityref {
@@ -3995,9 +3990,9 @@ REVISAR
     leaf svc-mtu {
       type uint32;
       description
-        "SVC MTU, it is also known as the maximum transmission unit or
-         maximum frame size,When a frame is larger than the MTU, it is
-         broken down, or fragmented, into smaller pieces by the
+        "SVC MTU, it is also known as the maximum transmission unit
+         or maximum frame size,When a frame is larger than the MTU,
+         it is broken down, or fragmented, into smaller pieces by the
          network protocol to accommodate the MTU of the network";
     }
     description
@@ -4010,19 +4005,19 @@ REVISAR
       description
         "Preserve the CE-VLAN ID from ingress to egress,i.e.,
          CE-VLAN tag of the egress frame are identical to
-         those of the ingress frame that yielded this
-         egress service frame. If All-to-One bundling within a site
-         is Enabled, then preservation applies to all Ingress service
-         frames. If All-to-One bundling is Disabled, then preservation
-         applies to tagged Ingress service frames having CE-VLAN ID 1
-         through 4094.";
+         those of the ingress frame that yielded this egress
+         service frame. If All-to-One bundling within a site
+         is Enabled, then preservation applies to all Ingress
+         service frames. If All-to-One bundling is Disabled,
+         then preservation applies to tagged Ingress service
+         frames having CE-VLAN ID 1 through 4094.";
     }
     leaf ce-vlan-cos-perservation {
       type boolean;
       description
-        "CE vlan CoS preservation. PCP bits in the CE-VLAN tag of the
-         egress frame are identical to those of the ingress frame that
-         yielded this egress service frame.";
+        "CE vlan CoS preservation. PCP bits in the CE-VLAN tag
+         of the egress frame are identical to those of the ingress
+         frame that yielded this egress service frame.";
     }
     description
       "Grouping for service preservation.";
@@ -4608,9 +4603,9 @@ REVISAR
           type uint64;
           description
             "Committed Burst Size.CBS controls the bursty nature
-             of the traffic. Traffic that does not use the configured
-             CIR accumulates credits until the credits reach the
-             configured CBS.";
+             of the traffic. Traffic that does not use the
+             configured CIR accumulates credits until the credits
+             reach the configured CBS.";
         }
         leaf eir {
           type uint64;
@@ -4624,14 +4619,15 @@ REVISAR
           description
             "Excess Burst Size. The bandwidth available for burst
              traffic from the EBS is subject to the amount of
-             bandwidth that is accumulated during periods when traffic
-             allocated by the EIR policy is not used.";
+             bandwidth that is accumulated during periods when
+             traffic allocated by the EIR policy is not used.";
         }
         leaf pir {
           type uint64;
           description
             "Peak Information Rate, i.e., maixmum frame delivery
-             allowed. It is equal to or less than sum of cir and eir.";
+             allowed. It is equal to or less than sum of cir and
+             eir.";
         }
         leaf pbs {
           type uint64;
@@ -4679,9 +4675,9 @@ REVISAR
           type uint64;
           description
             "Committed Burst Size.CBS controls the bursty nature
-             of the traffic. Traffic that does not use the configured
-             CIR accumulates credits until the credits reach the
-             configured CBS.";
+             of the traffic. Traffic that does not use the
+             configured CIR accumulates credits until the credits
+             reach the configured CBS.";
         }
         leaf eir {
           type uint64;
@@ -4695,8 +4691,8 @@ REVISAR
           description
             "Excess Burst Size. The bandwidth available for burst
              traffic from the EBS is subject to the amount of
-             bandwidth that is accumulated during periods when traffic
-             allocated by the EIR policy is not used.";
+             bandwidth that is accumulated during periods when
+             traffic allocated by the EIR policy is not used.";
         }
         leaf pir {
           type uint64;
@@ -5066,8 +5062,9 @@ REVISAR
                     "Interface MTU, it is also known as the maximum
                      transmission unit or maximum frame size. When a
                      frame is larger than the MTU, it is broken down,
-                     or fragmented, into smaller pieces by the network
-                     protocol to accommodate the MTU of the network";
+                     or fragmented, into smaller pieces by the
+                     network protocol to accommodate the MTU of the
+                     network";
                 }
                 uses l3vpn:service-status;
                 uses access-diversity;

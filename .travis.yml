@@ -24,15 +24,16 @@ install:
 
    - pip install pyang
    - pip install xym
-   - pin install xml2rfc
+   - pip install xml2rfc
 
 script:
 
   - cd I-D-L2NM
   - xym draft-barguil-opsawg-l2sm-l2nm-01.txt
+  - xml2rfc --help
   - cd ..
   - cd Yang
   - pyang -f tree --ietf ietf-l2vpn-ntw.yang
   - yanglint -f yang ietf-l2vpn-ntw.yang
-  - xml2rfc --help
+
  

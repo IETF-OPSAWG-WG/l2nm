@@ -30,6 +30,8 @@ script:
 
   - cd I-D-L2NM
   - xym draft-barguil-opsawg-l2sm-l2nm-01.txt
+  - export yang_extracted=`ls *.yang`
+  - diff $yang_extracted ../Yang/ietf-l2vpn-ntw.yang
   - xml2rfc draft-barguil-opsawg-l2sm-l2nm-02.xml
   - cd ..
   - cd Yang

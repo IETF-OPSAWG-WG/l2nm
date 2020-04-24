@@ -223,7 +223,7 @@
       </address>
     </author>
 
-    <date day="9" month="March" year="2020"/>
+    <date day="24" month="April" year="2020"/>
 
     <!-- Meta-data Declarations -->
 
@@ -1064,7 +1064,7 @@ string]]>
     <section anchor="YANG_module" title="YANG Module">
       <figure align="center" anchor="module_YANG">
         <artwork align="left"><![CDATA[
-<CODE BEGINS>file "ietf-l2vpn-ntw@2020-03-09.yang"
+<CODE BEGINS>file "ietf-l2vpn-ntw@2020-04-24.yang"
 module ietf-l2vpn-ntw {
   yang-version 1.1;
   namespace "urn:ietf:params:xml:ns:yang:ietf-l2vpn-ntw";
@@ -5062,7 +5062,7 @@ module ietf-l2vpn-ntw {
                      network protocol to accommodate the MTU of the
                      network";
                 }
-                uses l3vpn:service-status;
+                uses l3vpn-ntw:service-status;
                 uses access-diversity;
                 uses ethernet-connection-grouping;
                 uses availability-grouping;

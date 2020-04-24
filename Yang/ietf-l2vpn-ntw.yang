@@ -3995,7 +3995,7 @@ module ietf-l2vpn-ntw {
                      network protocol to accommodate the MTU of the
                      network";
                 }
-                uses l3vpn:service-status;
+                uses l3vpn-ntw:service-status;
                 uses access-diversity;
                 uses ethernet-connection-grouping;
                 uses availability-grouping;

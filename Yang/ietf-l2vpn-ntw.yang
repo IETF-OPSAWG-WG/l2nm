@@ -23,6 +23,12 @@ module ietf-l2vpn-ntw {
     reference
       "RFC NNNN: A Layer 3 VPN Network YANG Model";
   }
+  import ietf-l2vpn-svc {
+    prefix l2vpn-svc;
+    reference
+      "RFC 8466: YANG Data Model for Layer 2 Virtual Private 
+        Network (L2VPN) Service Delivery";
+  }
   import ietf-packet-fields {
     prefix pf;
     reference
@@ -248,16 +254,22 @@ module ietf-l2vpn-ntw {
         value 1;
         description
           "Transport based on LDP.";
+        reference
+          "RFC 5036: LDP Specification";
       }
       enum BGP {
         value 2;
         description
           "Transport based on BGP.";
+        reference
+          "RFC 4760: Multiprotocol Extensions for BGP-4";
       }
       enum SR {
         value 3;
         description
           "Transport based on Segment Routing";
+        reference
+         "RFC 8660: Segment Routing with the MPLS Data Plane";
       }
       enum SR-TE {
         value 4;
@@ -269,6 +281,8 @@ module ietf-l2vpn-ntw {
         value 5;
         description
           "Transport based on RSVP-TE signaled tunnels";
+        reference
+         "RFC 3209: RSVP-TE: Extensions to RSVP for LSP Tunnels";
       }
     }
     description
@@ -357,85 +371,27 @@ module ietf-l2vpn-ntw {
   /* Identities */
 
   identity multicast-tree-type {
+    base l2vpn-svc:multicast-tree-type;
     description
       "Base identity for multicast tree type.";
   }
 
-  identity ssm-tree-type {
-    base multicast-tree-type;
-    description
-      "Identity for SSM tree type.";
-  }
-
-  identity asm-tree-type {
-    base multicast-tree-type;
-    description
-      "Identity for ASM tree type.";
-  }
-
-  identity bidir-tree-type {
-    base multicast-tree-type;
-    description
-      "Identity for bidirectional tree type.";
-  }
-
   identity mapping-type {
+    base l2vpn-svc:multicast-gp-address-mapping;
     description
       "Identity mapping-type.";
   }
 
-  identity static-mapping {
-    base mapping-type;
-    description
-      "Identity for static mapping, i.e.,attach the interface
-       to the Multicast group as static member";
-  }
-
-  identity dynamic-mapping {
-    base mapping-type;
-    description
-      "Identity for dynamic mapping, i.e.,interface was added
-       to the Multicast group as a result of snooping";
-  }
-
   identity tf-type {
+    base l2vpn-svc:tf-type;
     description
       "Identity traffic-type";
   }
 
-  identity multicast-traffic {
-    base tf-type;
-    description
-      "Identity for multicast traffic";
-  }
-
-  identity broadcast-traffic {
-    base tf-type;
-    description
-      "Identity for broadcast traffic";
-  }
-
-  identity unknown-unicast-traffic {
-    base tf-type;
-    description
-      "Identity for unknown unicast traffic";
-  }
-
   identity pwe-encapsulation-type {
+    base l2vpn-svc:encapsulation-type;
     description
       "Identity pwe-encapsulation-type";
-  }
-
-  identity ethernet-over-mpls {
-    base pwe-encapsulation-type;
-    description
-      "Identity for ethernet over mpls";
-  }
-
-  identity ethernet-tagged-mpls {
-    base pwe-encapsulation-type;
-    description
-      "Identity for ethernet tagged over mpls";
   }
 
   identity l2tp-pw-type {
@@ -487,43 +443,15 @@ module ietf-l2vpn-ntw {
   }
 
   identity eth-inf-type {
+    base l2vpn-svc:eth-inf-type;
     description
       "Identity of Ethernet Interface Type";
   }
 
-  identity phy-inf {
-    base eth-inf-type;
-    description
-      "Identity of Physical Interface type";
-  }
-
-  identity lag-inf {
-    base eth-inf-type;
-    description
-      "Identity of LAG Interface type";
-  }
-
   identity bw-type {
+    base l2vpn-svc:bw-type;
     description
       "Identity of bandwidth";
-  }
-
-  identity bw-per-cos {
-    base bw-type;
-    description
-      "Bandwidth is per cos";
-  }
-
-  identity bw-per-port {
-    base bw-type;
-    description
-      "Bandwidth is per site network access";
-  }
-
-  identity opaque {
-    base bw-type;
-    description
-      "Opaque";
   }
 
   identity site-type {
@@ -544,132 +472,35 @@ module ietf-l2vpn-ntw {
   }
 
   identity service-type {
+    base l2vpn-svc:service-type;
     description
       "Base Identity of service type.";
   }
 
-  identity vpws {
-    base service-type;
-    description
-      " point-to-point Virtual Private Wire Services(VPWS) type.";
-  }
-
-  identity pwe3 {
-    base service-type;
-    description
-      " Pseudo-Wire Emulation Edge to
-       Edge(PWE3)Service type. .";
-  }
-
-  identity ldp-l2tp-vpls {
-    base service-type;
-    description
-      "LDP based or L2TP based multipoint Virtual Private LAN
-       services (VPLS) Service Type. This VPLS uses LDP-signaled
-       Pseudowires or L2TP signaled Pseudowires.";
-  }
-
-  identity bgp-vpls {
-    base service-type;
-    description
-      "BGP based multipoint Virtual Private LAN services (VPLS)
-       Service Type. This VPLS uses a Border Gateway Protocol (BGP)
-       control plane as described in RFC4761 and RFC6624.";
-  }
-
-  identity vpws-evpn {
-    base service-type;
-    description
-      "VPWS Service Type using Ethernet VPN(EVPN) specified in
-       RFC 7432.";
-  }
-
-  identity pbb-evpn {
-    base service-type;
-    description
-      "PBB Service Type using Ethernet VPN(EVPN) specified in
-       RFC 7432.";
-  }
-
   identity bundling-type {
+    base l2vpn-svc:bundling-type;
     description
       "This is base identity for Bundling type. It supports
        multiple CE-VLAN associated with L2VPN service or all
        CE-VLANs associated with L2VPN service.";
   }
 
-  identity multi-svc-bundling {
-    base bundling-type;
-    description
-      "Identity for multiple service bundling,i.e.,
-       multiple CE-VLAN IDs can be associated with an
-       L2VPN Service at site.";
-  }
-
-  identity one-to-one-bundling {
-    base bundling-type;
-    description
-      "Identity for one to one service bundling,i.e.,
-       Each L2VPN can be associated with only one CE-VLAN IDs
-       at site.";
-  }
-
-  identity all-to-one-bundling {
-    base bundling-type;
-    description
-      "Identity for all to one bundling,i.e.,all CE-VLAN IDs
-       are mapped to one L2VPN Service.";
-  }
-
   identity color-id {
+    base l2vpn-svc:color-id;
     description
       "base identity of color id";
   }
 
-  identity color-id-cvlan {
-    base color-id;
-    description
-      "Identity of color id base on  CVLAN ";
-  }
-
   identity cos-id {
+    base l2vpn-svc:cos-id;
     description
       "Identity of class of service id";
   }
 
-  identity cos-id-pcp {
-    base cos-id;
-    description
-      "Identity of cos id based on PCP";
-  }
-
-  identity cos-id--dscp {
-    base cos-id;
-    description
-      "Identity of cos id based on DSCP";
-  }
-
   identity color-type {
+    base l2vpn-svc:color-type;
     description
       "Identity of color types";
-  }
-
-  identity green {
-    base color-type;
-    description
-      "Identity of green type";
-  }
-
-  identity yellow {
-    base color-type;
-    description
-      "Identity of yellow type";
-  }
-
-  identity red {
-    base color-type;
-    description
-      "Identity of red type";
   }
 
   identity perf-tier-opt {
@@ -719,94 +550,33 @@ module ietf-l2vpn-ntw {
   }
 
   identity bum-type {
+    base l2vpn-svc:bum-type;
     description
       "Identity of BUM type";
   }
 
-  identity broadcast {
-    base bum-type;
-    description
-      "Identity of broadcast";
-  }
-
-  identity unicast {
-    base bum-type;
-    description
-      "Identity of unicast";
-  }
-
-  identity multicast {
-    base bum-type;
-    description
-      "Identity of multicast";
-  }
-
   identity loop-prevention-type {
+    base l2vpn-svc:loop-prevention-type;
     description
       "Identity of loop prevention";
   }
 
-  identity shut {
-    base loop-prevention-type;
-    description
-      "Identity of shut protection";
-  }
-
-  identity trap {
-    base loop-prevention-type;
-    description
-      "Identity of trap protection";
-  }
-
   identity lacp-state {
+    base l2vpn-svc:lacp-state;
     description
       "Identity of LACP state";
   }
 
-  identity lacp-on {
-    base lacp-state;
-    description
-      "Identity of LCAP on";
-  }
-
-  identity lacp-off {
-    base lacp-state;
-    description
-      "Identity of LACP off";
-  }
-
   identity lacp-mode {
+  base l2vpn-svc:lacp-mode;
     description
       "Identity of LACP mode";
   }
 
-  identity lacp-passive {
-    base lacp-mode;
-    description
-      "Identity of LACP passive";
-  }
-
-  identity lacp-active {
-    base lacp-mode;
-    description
-      "Identity of LACP active";
-  }
-
   identity lacp-speed {
+    base l2vpn-svc:lacp-speed;
     description
       "Identity of LACP speed";
-  }
-
-  identity lacp-fast {
-    base lacp-speed;
-    description
-      "Identity of LACP fast";
-  }
-
-  identity lacp-slow {
-    base lacp-speed;
-    description
-      "Identity of LACP slow";
   }
 
   identity vpn-signaling-type {
@@ -902,70 +672,25 @@ module ietf-l2vpn-ntw {
   }
 
   identity management {
+    base l2vpn-svc:management;
     description
       "Base identity for site management scheme.";
   }
 
-  identity co-managed {
-    base management;
-    description
-      "Base identity for co-managed site.";
-  }
-
-  identity customer-managed {
-    base management;
-    description
-      "Base identity for customer managed site.";
-  }
-
-  identity provider-managed {
-    base management;
-    description
-      "Base identity for provider managed site.";
-  }
-
   identity address-family {
+    base l2vpn-svc:address-family;
     description
       "Base identity for an address family.";
   }
 
-  identity ipv4 {
-    base address-family;
-    description
-      "Identity for IPv4 address family.";
-  }
-
-  identity ipv6 {
-    base address-family;
-    description
-      "Identity for IPv6 address family.";
-  }
-
   identity vpn-topology {
+    base l3vpn-ntw:vpn-topology;
     description
       "Base identity for VPN topology.";
   }
 
-  identity any-to-any {
-    base vpn-topology;
-    description
-      "Identity for any to any VPN topology.";
-  }
-
-  identity hub-spoke {
-    base vpn-topology;
-    description
-      "Identity for Hub'n'Spoke VPN topology.";
-  }
-
-  identity hub-spoke-disjoint {
-    base vpn-topology;
-    description
-      "Identity for Hub'n'Spoke VPN topology
-       where Hubs cannot talk between each other.";
-  }
-
   identity site-role {
+    base l2vpn-svc:site-role;
     description
       "Base identity for site type.";
   }
@@ -973,174 +698,38 @@ module ietf-l2vpn-ntw {
   identity any-to-any-role {
     base site-role;
     description
-      "Site in an any to any IPVPN.";
-  }
-
-  identity spoke-role {
-    base site-role;
-    description
-      "Spoke Site in a Hub and Spoke IPVPN.";
-  }
-
-  identity hub-role {
-    base site-role;
-    description
-      "Hub Site in a Hub and Spoke IPVPN.";
+      "Any-to-any-role site type.";
   }
 
   identity pm-type {
+    base l2vpn-svc:pm-type;
     description
       "Performance monitor type";
   }
 
-  identity loss {
-    base pm-type;
-    description
-      "Loss measurement";
-  }
-
-  identity delay {
-    base pm-type;
-    description
-      "Delay measurement";
-  }
-
   identity fault-alarm-defect-type {
+    base l2vpn-svc:fault-alarm-defect-type;
     description
       "Indicating the alarm priority defect";
   }
 
-  identity remote-rdi {
-    base fault-alarm-defect-type;
-    description
-      "Indicates the aggregate health of the remote MEPs.";
-  }
-
-  identity remote-mac-error {
-    base fault-alarm-defect-type;
-    description
-      "Indicates that one or more of the remote MEPs is
-       reporting a failure in its Port Status TLV or
-       Interface Status TLV.";
-  }
-
-  identity remote-invalid-ccm {
-    base fault-alarm-defect-type;
-    description
-      "Indicates that at least one of the Remote MEP
-       state machines is not receiving valid CCMs
-       from its remote MEP.";
-  }
-
-  identity invalid-ccm {
-    base fault-alarm-defect-type;
-    description
-      "Indicates that one or more invalid CCMs has been
-       received and that 3.5 times that CCMs transmission
-       interval has not yet expired.";
-  }
-
-  identity cross-connect-ccm {
-    base fault-alarm-defect-type;
-    description
-      "Indicates that one or more cross connect CCMs has been
-       received and that 3.5 times of at least one of those
-       CCMs transmission interval has not yet expired.";
-  }
-
   identity frame-delivery-mode {
+   base l2vpn-svc:frame-delivery-mode;
     description
       "Delivery types";
   }
 
-  identity discard {
-    base frame-delivery-mode;
-    description
-      "Service Frames are discarded.";
-  }
-
-  identity unconditional {
-    base frame-delivery-mode;
-    description
-      "Service Frames are unconditionally
-       delivered to the destination site.";
-  }
-
-  identity unknown-discard {
-    base frame-delivery-mode;
-    description
-      "Service Frame are conditionally
-       delivered to the destination site and
-       the packet with unknown destination address
-       will be discarded.";
-  }
-
   identity pw-topo-type {
+    base l2vpn-svc:site-network-access-type;
     description
       "base identity for pw topology Type";
   }
 
-  identity point-to-point {
-    base pw-topo-type;
-    description
-      "identity for Point to Point.";
-  }
-
-  identity multipoint-to-point {
-    base pw-topo-type;
-    description
-      "identity for Multipoint to point.";
-  }
-
-  identity point-to-multipoint {
-    base pw-topo-type;
-    description
-      "Identity for point to Multipoint.";
-  }
-
   identity placement-diversity {
+   base l2vpn-svc:placement-diversity;
     description
       "Base identity for site placement
        constraints";
-  }
-
-  identity bearer-diverse {
-    base placement-diversity;
-    description
-      "Identity for bearer diversity.
-       The bearers should not use common elements.";
-  }
-
-  identity pe-diverse {
-    base placement-diversity;
-    description
-      "Identity for PE diversity";
-  }
-
-  identity pop-diverse {
-    base placement-diversity;
-    description
-      "Identity for POP diversity";
-  }
-
-  identity linecard-diverse {
-    base placement-diversity;
-    description
-      "Identity for linecard diversity";
-  }
-
-  identity same-pe {
-    base placement-diversity;
-    description
-      "Identity for having sites connected
-       on the same PE";
-  }
-
-  identity same-bearer {
-    base placement-diversity;
-    description
-      "Identity for having sites connected
-       using the same bearer";
   }
 
   identity l2-access-type {
@@ -1192,69 +781,27 @@ module ietf-l2vpn-ntw {
   }
 
   identity provision-model {
+   base l2vpn-svc:provision-model;
     description
       "base identity for provision model.";
   }
 
-  identity single-side-provision {
-    description
-      "Identity for single side provisioning with discovery.";
-  }
-
-  identity doubled-side-provision {
-    description
-      "Identity for double signle provisioning.";
-  }
-
   identity mac-learning-mode {
+   base l2vpn-svc:mac-learning-mode;
     description
       "MAC learning mode";
   }
 
-  identity data-plane {
-    base mac-learning-mode;
-    description
-      "User MAC addresses are learned through ARP broadcast.";
-  }
-
-  identity control-plane {
-    base mac-learning-mode;
-    description
-      "User MAC addresses are advertised through EVPN-BGP";
-  }
-
   identity vpn-policy-filter-type {
+   base l2vpn-svc:vpn-policy-filter-type;
     description
       "Base identity for filter type.";
   }
 
-  identity lan {
-    base vpn-policy-filter-type;
-    description
-      "Identity for lan tag filter type.";
-  }
-
   identity mac-action {
+   base l2vpn-svc:mac-action;
     description
       "Base identity for MAC action.";
-  }
-
-  identity drop {
-    base mac-action;
-    description
-      "Identity for packet drop.";
-  }
-
-  identity flood {
-    base mac-action;
-    description
-      "Identity for packet flooding.";
-  }
-
-  identity warning {
-    base mac-action;
-    description
-      "Identity for sending a warning log message.";
   }
 
   identity load-balance-method {
@@ -1286,141 +833,21 @@ module ietf-l2vpn-ntw {
   }
 
   identity qos-profile-direction {
+   base l2vpn-svc:qos-profile-direction;
     description
       "Base identity for qos profile direction.";
   }
 
-  identity site-to-wan {
-    base qos-profile-direction;
-    description
-      "Identity for Site to WAN direction.";
-  }
-
-  identity wan-to-site {
-    base qos-profile-direction;
-    description
-      "Identity for WAN to Site direction.";
-  }
-
-  identity bidirectional {
-    base qos-profile-direction;
-    description
-      "Identity for both WAN to Site direction and Site to WAN
-       direction.";
-  }
-
   identity vxlan-peer-mode {
+   base l2vpn-svc:vxlan-peer-mode;
     description
       "Base identity for vxlan peer mode.";
   }
 
-  identity static-mode {
-    base vxlan-peer-mode;
-    description
-      "Identity for the vxlan access in static mode.";
-  }
-
-  identity bgp-mode {
-    base vxlan-peer-mode;
-    description
-      "Identity for the vxlan access by bgp evpn learning.";
-  }
-
   identity customer-application {
+   base l2vpn-svc:customer-application;
     description
       "Base identity for customer application.";
-  }
-
-  identity web {
-    base customer-application;
-    description
-      "Identity for Web application (e.g., HTTP, HTTPS).";
-  }
-
-  identity mail {
-    base customer-application;
-    description
-      "Identity for mail application.";
-  }
-
-  identity file-transfer {
-    base customer-application;
-    description
-      "Identity for file transfer application (e.g., FTP, SFTP).";
-  }
-
-  identity database {
-    base customer-application;
-    description
-      "Identity for database application.";
-  }
-
-  identity social {
-    base customer-application;
-    description
-      "Identity for social-network application.";
-  }
-
-  identity games {
-    base customer-application;
-    description
-      "Identity for gaming application.";
-  }
-
-  identity p2p {
-    base customer-application;
-    description
-      "Identity for peer-to-peer application.";
-  }
-
-  identity network-management {
-    base customer-application;
-    description
-      "Identity for management application
-       (e.g., Telnet, syslog, SNMP).";
-  }
-
-  identity voice {
-    base customer-application;
-    description
-      "Identity for voice application.";
-  }
-
-  identity video {
-    base customer-application;
-    description
-      "Identity for video conference application.";
-  }
-
-  identity embb {
-    base customer-application;
-    description
-      "Identity for enhanced Mobile Broadband(eMBB)
-       application. Note that eMBB application demands
-       the network performance with wide variety of
-       characteristics such as data rate, latency,
-       loss rate, reliability and many other parameters.";
-  }
-
-  identity urllc {
-    base customer-application;
-    description
-      "Identity for Ultra-Reliable and Low Latency
-       Communications (URLLC) application. Note that
-       URLLC application demands the network performance
-       with wide variety of characteristics such as latency,
-       reliability and many other parameters.";
-  }
-
-  identity mmtc {
-    base customer-application;
-    description
-      "Identity for massive Machine Type
-       Communications (mMTC) application. Note that
-       mMTC application demands the network performance
-       with wide variety of characteristics such as data
-       rate, latency, loss rate, reliability and many
-       other parameters.";
   }
 
   identity precedence-type {
@@ -1523,25 +950,6 @@ module ietf-l2vpn-ntw {
       "Configuration with split horizon enabled";
   }
 
-  grouping site-bearer-params {
-    container site-bearers {
-      leaf bearer-id {
-        type string;
-        description
-          "Unique identifier for a bearer. This
-           identifies shall be mapped to the bearer-reference
-           on a vpn-network-access.";
-      }
-      description
-        "Container that encloses all the bearers
-         connected to a site. A bearer is mapped one to one
-         to a port on the PE router.";
-    }
-    description
-      "Container that encloses all the bearers
-       connected to a site. A bearer is mapped one to one
-       to a port on the PE router.";
-  }
 
   grouping svc-precedence {
     container svc-precedence {
@@ -2024,6 +1432,7 @@ module ietf-l2vpn-ntw {
           description
             "PWE Encapsulation Type";
         }
+        uses vpn-route-targets;
         container pwe-mtu {
           leaf allow-mtu-mismatch {
             type boolean;
@@ -2888,6 +2297,15 @@ module ietf-l2vpn-ntw {
 
   grouping ethernet-connection-grouping {
     container connection {
+      leaf port-id {
+          type string;
+          description
+            "Reference to the Port-id.
+             The semantic of the Port-Id depends on the vendor's
+             semantic. i.e ge-X/Y/Z , xe-X/Y/Z , et-X/Y/Z,AeXXX.YYY,
+             aeXXX,GigabitEthernetX/Y/Z";
+        }
+
       leaf encapsulation-type {
         type identityref {
           base encapsulation-type;
@@ -3719,6 +3137,7 @@ module ietf-l2vpn-ntw {
     container service {
       uses site-service-basic;
       uses site-service-qos-profile;
+      uses svc-precedence;
       description
         "Container for service";
     }
@@ -3935,7 +3354,7 @@ module ietf-l2vpn-ntw {
         uses vpn-extranet;
         uses svc-mtu-grouping;
         uses svc-preservation-grouping;
-        uses svc-transport-encapsulation;
+        uses l3vpn-ntw:svc-transport-encapsulation;
         container vpn-nodes {
           list vpn-node {
             key "vpn-node-id ne-id";
@@ -3962,7 +3381,12 @@ module ietf-l2vpn-ntw {
               description
                 "NE IP address";
             }
-            uses vpn-route-targets;
+            leaf port-id {
+              type string;
+              description
+                "NE Port-id";
+            }
+            uses signaling-options-grouping;
             container vpn-network-accesses {
               list vpn-network-access {
                 key "network-access-id";
@@ -4000,13 +3424,11 @@ module ietf-l2vpn-ntw {
                 uses ethernet-connection-grouping;
                 uses availability-grouping;
                 uses service-grouping;
-                uses svc-precedence;
                 uses B-U-M-grouping;
                 uses ethernet-svc-oam-grouping;
                 uses mac-loop-prevention-grouping;
                 uses acl-grouping;
                 uses mac-addr-limit-grouping;
-                uses site-bearer-params;
                 description
                   "List of VPN Network Accesses.";
               }

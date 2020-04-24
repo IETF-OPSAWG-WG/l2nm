@@ -59,7 +59,7 @@
     <!-- The abbreviated title is used in the page header - it is only necessary if the
          full title is longer than 39 characters -->
 
-    <title abbrev="L2NM">A Layer 2 VPN Network Yang Model</title>
+    <title abbrev="L2NM">A Layer 2 VPN Network YANG Model</title>
 
     <!-- add 'role="editor"' below for the editors if appropriate -->
 
@@ -251,7 +251,7 @@
    by a Network Controller to derive the configuration
    information that will be sent to relevant network devices.</t>
 
-   <t>The L2NM Yang Data model complements the Layer 2 Service Model (RFC8466) by
+   <t>The L2NM YANG Data model complements the Layer 2 Service Model (RFC8466) by
    providing a network-centric view of the service that is internal
    to a Service Provider.</t>
     </abstract>
@@ -308,7 +308,7 @@
             Orchestrator to request a VPN Service to a Network controller
             or to expose the list of active L2VPN services.</t>
 
-            <t>Service Orchestrator: Referst to a functional entity that interacts with
+            <t>Service Orchestrator: Refers to a functional entity that interacts with
             the customer of a L2 VPN relying upon, e.g. L2SM. The Service Orchestrator is responsible
             of the CE-PE attachment circuits, the PE selection, and requesting
             the activation of the L2 VPN service to a network controller.</t>
@@ -327,10 +327,6 @@
             VPN node. Traffic coming from the VPN network access belongs to
             the VPN. The attachment circuits (bearers) between CEs and PEs are
             terminated in the VPN network access.</t>
-
-            <t>VPN Site (vpn-site): Refers to A VPN customer's location that is
-            connected to the Service Provider network via a CE-PE link, which
-            can access at least one VPN.</t>
 
             <t>VPN Service Provider (SP): Is a Service Provider that offers
             VPN-related services.</t>
@@ -481,7 +477,7 @@
       <section anchor="structure_model" title="Structure of the Module">
         <t>The 'ietf-l2vpn-ntw' module uses two main containers:
         'vpn-services' and 'vpn-profiles'. The 'vpn-services' container
-        maintains the set of L2 VPN Services managed in the service provider
+        maintains a set of L2 VPN Services managed in the service provider
         network. The module allows to create a new l2 VPN service by adding a
         new instance of 'vpn-service'. The 'vpn-service' is the data structure
         that abstracts the VPN Service.</t>
@@ -500,8 +496,8 @@
       </section>
 
       <section anchor="l2_vpn_service" title="L2 VPN Service">
-        <t>The 'vpn-svc' is the data structure that abstracts a L2 VPN Service
-        within the SP Network. Every 'vpn-svc' has a unique
+        <t>The 'vpn-service' is the data structure that abstracts a L2 VPN Service
+        within the SP Network. Every 'vpn-service' has a unique
         identifier: vpn-id. Such vpn-id is only meaningful locally within the
         Network controller. In order to facilitate the recognition of the
         service, a 'customer-name' and a 'description' may be included. The
@@ -522,7 +518,7 @@
           <artwork align="left">
   
  +--rw vpn-services
-     +--rw vpn-svc* [vpn-id]
+     +--rw vpn-service* [vpn-id]
            +--rw vpn-id                      svc-id
            +--rw vpn-svc-type?               identityref
            +--rw customer-name?              string
@@ -635,7 +631,7 @@
       </section>
 
       <section anchor="l2_tree" title="L2NM Module Tree">
-        <t>The tree structure of the Yang module proposed by this document is
+        <t>The tree structure of the YANG module proposed by this document is
         shown below:</t>
 
         <figure align="center" anchor="module_tree">
@@ -649,9 +645,9 @@ module: ietf-l2vpn-ntw
      |     +--rw bfd-profile-identifier*      string
      |     +--rw remote-carrier-identifier*   string
      +--rw vpn-services
-        +--rw vpn-svc* [vpn-id]
+        +--rw vpn-service* [vpn-id]
            +--rw vpn-id                      svc-id
-           +--rw vpn-svc-type?               identityref
+           +--rw vpn-service-type?               identityref
            +--rw customer-name?              string
            +--rw svc-topo?                   identityref
            +--rw status?                     operational-type
@@ -1028,9 +1024,9 @@ string]]>
       </section>
     </section>
 
-    <section anchor="relation" title="Relation with other Yang Models">
+    <section anchor="relation" title="Relation with other YANG Models">
       <t>The L2NM model, aimed at managing the L2VPN Services in a Service
-      Provider Network controller/orchestrator has relations with other Yang
+      Provider Network controller/orchestrator has relations with other YANG
       modules.</t>
 
       <section anchor="relation_l2sm" title="Relation with L2SM">
@@ -1065,7 +1061,7 @@ string]]>
       </section>
     </section>
 
-    <section anchor="YANG_module" title="Yang Module">
+    <section anchor="YANG_module" title="YANG Module">
       <figure align="center" anchor="module_YANG">
         <artwork align="left"><![CDATA[
 <CODE BEGINS>file "ietf-l2vpn-ntw@2020-03-09.yang"
@@ -1090,7 +1086,7 @@ module ietf-l2vpn-ntw {
       "RFC 8341: Network Configuration Access Control Model";
   }
   import ietf-l3vpn-ntw {
-    prefix l3vpn;
+    prefix l3vpn-ntw;
     reference
       "RFC NNNN: A Layer 3 VPN Network YANG Model";
   }
@@ -1143,7 +1139,7 @@ module ietf-l2vpn-ntw {
      (https://www.rfc-editor.org/info/rfcXXXX); see the RFC itself
      for full legal notices.";
 
-  revision 2020-04-23 {
+  revision 2020-04-24 {
     description
       "Third revision -02 version";
     reference
@@ -2819,7 +2815,7 @@ module ietf-l2vpn-ntw {
             leaf vpn-id {
               type leafref {
                 path "/l2vpn-ntw/vpn-services/"
-                   + "vpn-svc/vpn-id";
+                   + "vpn-service/vpn-id";
               }
               mandatory true;
               description
@@ -2885,7 +2881,7 @@ module ietf-l2vpn-ntw {
       key "svc-id";
       leaf svc-id {
         type leafref {
-          path "/l2vpn-ntw/vpn-services/vpn-svc/vpn-id";
+          path "/l2vpn-ntw/vpn-services/vpn-service/vpn-id";
         }
         description
           "VPN Service identifier";
@@ -3076,7 +3072,7 @@ module ietf-l2vpn-ntw {
         }
         leaf vpn-id {
           type leafref {
-            path "/l2vpn-ntw/vpn-services/vpn-svc/vpn-id";
+            path "/l2vpn-ntw/vpn-services/vpn-service/vpn-id";
           }
           description
             "Identifies the target VPN";
@@ -3122,7 +3118,7 @@ module ietf-l2vpn-ntw {
         }
         leaf vpn-id {
           type leafref {
-            path "/l2vpn-ntw/vpn-services/vpn-svc/vpn-id";
+            path "/l2vpn-ntw/vpn-services/vpn-service/vpn-id";
           }
           description
             "Identifies the target EVPN";
@@ -4530,7 +4526,7 @@ module ietf-l2vpn-ntw {
             leaf vpn-id {
               type leafref {
                 path "/l2vpn-ntw/vpn-services"
-                   + "/vpn-svc/vpn-id";
+                   + "/vpn-service/vpn-id";
               }
               description
                 "Reference to a VPN.";
@@ -4947,7 +4943,7 @@ module ietf-l2vpn-ntw {
         "Container for VPN Profiles.";
     }
     container vpn-services {
-      list vpn-svc {
+      list vpn-service {
         key "vpn-id";
         leaf vpn-id {
           type svc-id;
@@ -4979,7 +4975,7 @@ module ietf-l2vpn-ntw {
             "Defining service topology, such as
              any-to-any,hub-spoke, etc.";
         }
-        uses l3vpn:service-status;
+        uses l3vpn-ntw:service-status;
         /*uses vpn-service-cloud-access;*/
         /*container global-l2cp-control {
         if-feature l2cp-control;

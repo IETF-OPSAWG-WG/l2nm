@@ -19,7 +19,7 @@ module ietf-l2vpn-ntw {
       "RFC 8341: Network Configuration Access Control Model";
   }
   import ietf-l3vpn-ntw {
-    prefix l3vpn;
+    prefix l3vpn-ntw;
     reference
       "RFC NNNN: A Layer 3 VPN Network YANG Model";
   }
@@ -72,7 +72,7 @@ module ietf-l2vpn-ntw {
      (https://www.rfc-editor.org/info/rfcXXXX); see the RFC itself
      for full legal notices.";
 
-  revision 2020-04-23 {
+  revision 2020-04-24 {
     description
       "Third revision -02 version";
     reference
@@ -1748,7 +1748,7 @@ module ietf-l2vpn-ntw {
             leaf vpn-id {
               type leafref {
                 path "/l2vpn-ntw/vpn-services/"
-                   + "vpn-svc/vpn-id";
+                   + "vpn-service/vpn-id";
               }
               mandatory true;
               description
@@ -1814,7 +1814,7 @@ module ietf-l2vpn-ntw {
       key "svc-id";
       leaf svc-id {
         type leafref {
-          path "/l2vpn-ntw/vpn-services/vpn-svc/vpn-id";
+          path "/l2vpn-ntw/vpn-services/vpn-service/vpn-id";
         }
         description
           "VPN Service identifier";
@@ -2005,7 +2005,7 @@ module ietf-l2vpn-ntw {
         }
         leaf vpn-id {
           type leafref {
-            path "/l2vpn-ntw/vpn-services/vpn-svc/vpn-id";
+            path "/l2vpn-ntw/vpn-services/vpn-service/vpn-id";
           }
           description
             "Identifies the target VPN";
@@ -2051,7 +2051,7 @@ module ietf-l2vpn-ntw {
         }
         leaf vpn-id {
           type leafref {
-            path "/l2vpn-ntw/vpn-services/vpn-svc/vpn-id";
+            path "/l2vpn-ntw/vpn-services/vpn-service/vpn-id";
           }
           description
             "Identifies the target EVPN";
@@ -3459,7 +3459,7 @@ module ietf-l2vpn-ntw {
             leaf vpn-id {
               type leafref {
                 path "/l2vpn-ntw/vpn-services"
-                   + "/vpn-svc/vpn-id";
+                   + "/vpn-service/vpn-id";
               }
               description
                 "Reference to a VPN.";
@@ -3876,7 +3876,7 @@ module ietf-l2vpn-ntw {
         "Container for VPN Profiles.";
     }
     container vpn-services {
-      list vpn-svc {
+      list vpn-service {
         key "vpn-id";
         leaf vpn-id {
           type svc-id;
@@ -3908,7 +3908,7 @@ module ietf-l2vpn-ntw {
             "Defining service topology, such as
              any-to-any,hub-spoke, etc.";
         }
-        uses l3vpn:service-status;
+        uses l3vpn-ntw:service-status;
         /*uses vpn-service-cloud-access;*/
         /*container global-l2cp-control {
         if-feature l2cp-control;

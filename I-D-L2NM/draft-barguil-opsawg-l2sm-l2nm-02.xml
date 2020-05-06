@@ -5219,32 +5219,33 @@ module ietf-l2vpn-ntw {
       &RFC6242;
 
       &RFC8341;
+         
+      &RFC6020;
+         
+      &RFC6241;
+
+      &RFC7950;
+
+      &RFC8040;    
+         
+      &RFC8466;
+         
+      &RFC8174;
+         
+      &RFC8214;
+
+      &RFC7432;
+         
     </references>
 
     <references title="Informative References">
       <!-- Here we use entities that we defined at the beginning. -->
 
-      &RFC6020;
-
-      &RFC6241;
-
-      &RFC7950;
-
-      &RFC8040;
-
       &RFC8309;
-
-      &RFC8466;
-
-      &RFC8174;
 
       &RFC8340;
 
       &RFC8453;
-
-      &RFC8214;
-
-      &RFC7432;
 
     </references>
 

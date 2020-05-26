@@ -930,10 +930,11 @@ module ietf-l2vpn-ntw {
           "Protocols used to support transport";
       }
       description
-        "";
+        "Container for the Transport Underlay.";
     }
     description
-      "";
+      "This grouping defines the type of underlay transport
+    for VPN service.";
   }
 
   grouping split-horizon-group {

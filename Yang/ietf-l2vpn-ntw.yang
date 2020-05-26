@@ -602,6 +602,12 @@ module ietf-l2vpn-ntw {
       "Identity of t-ldp.";
   }
 
+  identity h-vpls {
+    base vpn-signaling-type;
+    description
+      "Identity for h-vpls";
+  }
+
   identity l2tp {
     base vpn-signaling-type;
     description
@@ -625,7 +631,7 @@ module ietf-l2vpn-ntw {
       "Identity for vpls";
   }
 
-  identity h-vpls {
+  identity hvpls {
     base t-ldp-pwe-type;
     description
       "Identity for h-vpls";
@@ -921,6 +927,21 @@ module ietf-l2vpn-ntw {
     }
   }
 
+  grouping svc-transport-encapsulation {
+    container transport-encapsulation {
+      leaf-list protocol {
+        type protocol-type;
+        ordered-by user;
+        description
+          "Protocols used to support transport";
+      }
+      description
+        "Container for the Transport Underlay.";
+    }
+    description
+      "This grouping defines the type of underlay transport
+    for VPN service.";
+  }
 
   grouping split-horizon-group {
     container split-horizon {
@@ -1386,7 +1407,7 @@ module ietf-l2vpn-ntw {
           "VPN signaling types";
       }
       container l2vpn-bgp {
-        when "../type = 'l2vpn-bgp'" {
+        when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'l2vpn-ntw:l2vpn-bgp'" {
           description
             "Only applies when vpn signaling type is l2vpn
              BGP protocol.";
@@ -1433,7 +1454,7 @@ module ietf-l2vpn-ntw {
           "Container for MP BGP L2VPN";
       }
       container evpn-bgp {
-        when "../type = 'evpn-bgp'" {
+        when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'l2vpn-ntw:evpn-bgp'" {
           description
             "Only applies when vpn signaling type is EVPN
              BGP protocol.";
@@ -1477,7 +1498,7 @@ module ietf-l2vpn-ntw {
           "Container for MP BGP L2VPN";
       }
       container t-ldp-pwe {
-        when "../type = 't-ldp'" {
+        when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'l2vpn-ntw:t-ldp'" {
           description
             "Only applies when vpn signaling type is Target LDP.";
         }
@@ -1547,7 +1568,7 @@ module ietf-l2vpn-ntw {
             "List of AC and PW bindings.";
         }
         container qinq {
-          when "../type = 'h-vpls'" {
+          when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'l2vpn-ntw:h-vpls'" {
             description
               "Only applies when t-ldp pwe type is h-vpls.";
           }
@@ -1568,7 +1589,7 @@ module ietf-l2vpn-ntw {
           "Container of T-LDP PWE configurations";
       }
       container l2tp-pwe {
-        when "../type = 'l2tp'" {
+        when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'l2vpn-ntw:l2tp'" {
           description
             "Applies when vpn signaling type is L2TP protocol.";
         }

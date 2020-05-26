@@ -1407,7 +1407,7 @@ module ietf-l2vpn-ntw {
           "VPN signaling types";
       }
       container l2vpn-bgp {
-        when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'l2vpn-bgp'" {
+        when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'l2vpn-ntw:l2vpn-bgp'" {
           description
             "Only applies when vpn signaling type is l2vpn
              BGP protocol.";
@@ -1454,7 +1454,7 @@ module ietf-l2vpn-ntw {
           "Container for MP BGP L2VPN";
       }
       container evpn-bgp {
-        when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'evpn-bgp'" {
+        when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'l2vpn-ntw:evpn-bgp'" {
           description
             "Only applies when vpn signaling type is EVPN
              BGP protocol.";
@@ -1498,7 +1498,7 @@ module ietf-l2vpn-ntw {
           "Container for MP BGP L2VPN";
       }
       container t-ldp-pwe {
-        when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 't-ldp'" {
+        when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'l2vpn-ntw:t-ldp'" {
           description
             "Only applies when vpn signaling type is Target LDP.";
         }
@@ -1568,7 +1568,7 @@ module ietf-l2vpn-ntw {
             "List of AC and PW bindings.";
         }
         container qinq {
-          when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'h-vpls'" {
+          when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'l2vpn-ntw:h-vpls'" {
             description
               "Only applies when t-ldp pwe type is h-vpls.";
           }
@@ -1589,7 +1589,7 @@ module ietf-l2vpn-ntw {
           "Container of T-LDP PWE configurations";
       }
       container l2tp-pwe {
-        when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'l2tp'" {
+        when "/l2vpn-ntw/vpn-services/vpn-service/vpn-nodes/vpn-node/signaling-options/type = 'l2vpn-ntw:l2tp'" {
           description
             "Applies when vpn signaling type is L2TP protocol.";
         }

@@ -1327,13 +1327,7 @@ module ietf-l2vpn-ntw {
         description
           "Type of trees used by customer.";
       }
-      /*leaf traffic-type {
-      type identityref {
-      base tf-type;
-      }
-      description
-      "Traffic Type";
-      }*/
+
       uses bum-frame-delivery;
       leaf multicast-gp-port-mapping {
         type identityref {
@@ -1609,17 +1603,7 @@ module ietf-l2vpn-ntw {
             description
               "VC lable used to identify PW.";
           }
-          /*
-          leaf ac-group-id {
-          type leafref{
-          path "../../../../../"+
-          "vpn-network-accesses/vpn-network-access/"+
-          "access-diversity/groups/group/group-id";
-          }
-          description
-          "Reference to Network Access Group ID.";
-          }
-           */
+
           leaf pw-type {
             type identityref {
               base pw-topo-type;
@@ -1644,28 +1628,6 @@ module ietf-l2vpn-ntw {
     description
       "Grouping for signaling option";
   }
-
-  /*
-  grouping load-balance-grouping {
-  leaf enable {
-  type boolean;
-  description
-  "Enable load balancing";
-  }
-  leaf load-balance-method {
-  type identityref {
-  base load-balance-method;
-  
-  }
-  description
-  "select load balancing method such as
-  fat-pw, entropy-label, or
-  vxlan-source-udp-port.";
-  }
-  description
-  "Grouping for load balance ";
-  }
-   */
 
   grouping operational-requirements-ops {
     leaf actual-site-start {
@@ -1886,33 +1848,7 @@ module ietf-l2vpn-ntw {
     description
       "Grouping for site information";
   }
-
-  /*grouping site-security {
-  container security {
-  uses mac-loop-prevention-grouping;
-  container access-control-list {
-  list mac {
-   key "mac-address";
-   leaf mac-address {
-     type yang:mac-address;
-     description
-     "MAC address";
-   }
-   description
-     "List for MAC";
-  }
-  description
-   "Container for access control";
-  }
-  uses mac-addr-limit-grouping;
-  uses cvlan-svc-map-grouping;
-  description
-  "Security parameters";
-  }
-  description
-  "This grouping defines security parameters for a site";
-  }*/
-
+  
   grouping acl-grouping {
     container access-control-list {
       list mac {
@@ -3069,16 +3005,7 @@ module ietf-l2vpn-ntw {
         description
           "PCP value";
       }
-      /*leaf src-mac {
-        type yang:mac-address;
-        description
-          "Source MAC";
-      }
-      leaf dst-mac {
-        type yang:mac-address;
-        description
-          "Destination MAC";
-      }*/
+
       uses pf:acl-eth-header-fields;
       leaf color-type {
         type identityref {
@@ -3314,27 +3241,6 @@ module ietf-l2vpn-ntw {
              any-to-any,hub-spoke, etc.";
         }
         uses l3vpn-ntw:service-status;
-        /*uses vpn-service-cloud-access;*/
-        /*container global-l2cp-control {
-        if-feature l2cp-control;
-        leaf stp-rstp-mstp {
-        type control-mode;
-        description
-          "STP/RSTP/MSTP protocol type applicable to all UNIs.";
-        }
-        leaf pause {
-        type control-mode;
-        description
-          "Pause protocol type applicable to all UNIs ";
-        }
-        leaf lldp {
-        type boolean;
-        description
-          "LLDP protocol type applicable to all UNIs ";
-        }
-        description
-        "Container of L2CP control global configurations";
-        }*/
         uses site-service;
         uses vpn-service-multicast;
         uses vpn-extranet;

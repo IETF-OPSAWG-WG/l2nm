@@ -2394,6 +2394,7 @@ module ietf-l2vpn-ntw {
         description
           "Type of trees used by customer.";
       }
+
       uses bum-frame-delivery;
       leaf multicast-gp-port-mapping {
         type identityref {
@@ -2669,6 +2670,7 @@ module ietf-l2vpn-ntw {
             description
               "VC lable used to identify PW.";
           }
+
           leaf pw-type {
             type identityref {
               base pw-topo-type;
@@ -4070,16 +4072,7 @@ module ietf-l2vpn-ntw {
         description
           "PCP value";
       }
-      /*leaf src-mac {
-        type yang:mac-address;
-        description
-          "Source MAC";
-      }
-      leaf dst-mac {
-        type yang:mac-address;
-        description
-          "Destination MAC";
-      }*/
+
       uses pf:acl-eth-header-fields;
       leaf color-type {
         type identityref {
@@ -4315,27 +4308,6 @@ module ietf-l2vpn-ntw {
              any-to-any,hub-spoke, etc.";
         }
         uses l3vpn-ntw:service-status;
-        /*uses vpn-service-cloud-access;*/
-        /*container global-l2cp-control {
-        if-feature l2cp-control;
-        leaf stp-rstp-mstp {
-        type control-mode;
-        description
-          "STP/RSTP/MSTP protocol type applicable to all UNIs.";
-        }
-        leaf pause {
-        type control-mode;
-        description
-          "Pause protocol type applicable to all UNIs ";
-        }
-        leaf lldp {
-        type boolean;
-        description
-          "LLDP protocol type applicable to all UNIs ";
-        }
-        description
-        "Container of L2CP control global configurations";
-        }*/
         uses site-service;
         uses vpn-service-multicast;
         uses vpn-extranet;

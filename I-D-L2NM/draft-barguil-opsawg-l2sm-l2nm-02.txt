@@ -5,7 +5,7 @@
 Internet Engineering Task Force                          S. Barguil, Ed.
 Internet-Draft                                  O. Gonzalez de Dios, Ed.
 Intended status: Standards Track                              Telefonica
-Expires: November 1, 2020                                   M. Boucadair
+Expires: November 27, 2020                                  M. Boucadair
                                                                   Orange
                                                                 L. Munoz
                                                                 Vodafone
@@ -13,7 +13,7 @@ Expires: November 1, 2020                                   M. Boucadair
                                                                  Verizon
                                                                    J. Ma
                                                             China Unicom
-                                                          April 30, 2020
+                                                            May 26, 2020
 
 
                     A Layer 2 VPN Network YANG Model
@@ -47,15 +47,15 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on November 1, 2020.
+   This Internet-Draft will expire on November 27, 2020.
 
 
 
 
 
-Barguil, et al.         Expires November 1, 2020                [Page 1]
+Barguil, et al.         Expires November 27, 2020               [Page 1]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
 Copyright Notice
@@ -91,14 +91,14 @@ Table of Contents
      4.2.  Relation with Network Topology  . . . . . . . . . . . . .  18
      4.3.  Relation with Device Models . . . . . . . . . . . . . . .  18
    5.  YANG Module . . . . . . . . . . . . . . . . . . . . . . . . .  19
-   6.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . 103
-   7.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . . 103
-   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . . 103
-   9.  Security Considerations . . . . . . . . . . . . . . . . . . . 104
-   10. References  . . . . . . . . . . . . . . . . . . . . . . . . . 104
-     10.1.  Normative References . . . . . . . . . . . . . . . . . . 105
-     10.2.  Informative References . . . . . . . . . . . . . . . . . 105
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . . 106
+   6.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  89
+   7.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . .  89
+   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  89
+   9.  Security Considerations . . . . . . . . . . . . . . . . . . .  90
+   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .  91
+     10.1.  Normative References . . . . . . . . . . . . . . . . . .  91
+     10.2.  Informative References . . . . . . . . . . . . . . . . .  92
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  92
 
 1.  Introduction
 
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Barguil, et al.         Expires November 1, 2020                [Page 2]
+Barguil, et al.         Expires November 27, 2020               [Page 2]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
    by a Network to a Service Controller within the Service Provider
@@ -165,9 +165,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020                [Page 3]
+Barguil, et al.         Expires November 27, 2020               [Page 3]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
       circuits, the PE selection, and requesting the activation of the
@@ -221,9 +221,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020                [Page 4]
+Barguil, et al.         Expires November 27, 2020               [Page 4]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
                              +---------------+
@@ -277,9 +277,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020                [Page 5]
+Barguil, et al.         Expires November 27, 2020               [Page 5]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
    Figure 2 shows how L2SM and L2NM may be used in the context of the
@@ -333,9 +333,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020                [Page 6]
+Barguil, et al.         Expires November 27, 2020               [Page 6]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
 3.  Description of the L2NM YANG Module
@@ -389,9 +389,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020                [Page 7]
+Barguil, et al.         Expires November 27, 2020               [Page 7]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
    this is a network data model, the information about customers site is
@@ -445,9 +445,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020                [Page 8]
+Barguil, et al.         Expires November 27, 2020               [Page 8]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
    o  EVPN VPWSs between two customer sites or a set of customer sites
@@ -461,8 +461,8 @@ Internet-Draft                    L2NM                        April 2020
    The Service Provider Network might have several underlay
    possibilities available.  If no underlay transport protocol is
    specified, the Network Controller will take care of the transport
-   decision.  The following options are supported in the "transport-
-   encapsulation" container:
+   decision.  The following options are supported in the "underlay-
+   transport" container:
 
       LDP: MPLS with LDP (martini encapsulation).
 
@@ -501,9 +501,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020                [Page 9]
+Barguil, et al.         Expires November 27, 2020               [Page 9]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
       Lag Interface Support.
@@ -550,16 +550,16 @@ Internet-Draft                    L2NM                        April 2020
               +--rw svc-mtu?                    uint32
               +--rw ce-vlan-preservation?       boolean
               +--rw ce-vlan-cos-perservation?   boolean
-              +--rw transport-encapsulation
-              |  +--rw protocol?   protocols-type
+              +--rw underlay-transport
+              |  +--rw type*   protocol-type
               +--rw vpn-nodes
                  +--rw vpn-node* [vpn-node-id ne-id]
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 10]
+Barguil, et al.         Expires November 27, 2020              [Page 10]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
                     +--rw vpn-node-id             string
@@ -613,9 +613,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 11]
+Barguil, et al.         Expires November 27, 2020              [Page 11]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
                           |  +--rw encapsulation-type?    identityref
@@ -669,9 +669,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 12]
+Barguil, et al.         Expires November 27, 2020              [Page 12]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
                           |  |        |  +--rw micro-bfd-on-off?
@@ -725,9 +725,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 13]
+Barguil, et al.         Expires November 27, 2020              [Page 13]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
                           +--rw availability
@@ -781,9 +781,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 14]
+Barguil, et al.         Expires November 27, 2020              [Page 14]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
                           |     |     |  |     +--rw color-type?
@@ -837,9 +837,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 15]
+Barguil, et al.         Expires November 27, 2020              [Page 15]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
                           |                    +--rw bandwidth
@@ -893,9 +893,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 16]
+Barguil, et al.         Expires November 27, 2020              [Page 16]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
                           |  |     |       string
@@ -949,9 +949,9 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 17]
+Barguil, et al.         Expires November 27, 2020              [Page 17]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
                           |  +--rw number-retries?    uint32
@@ -1005,14 +1005,14 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 18]
+Barguil, et al.         Expires November 27, 2020              [Page 18]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
 5.  YANG Module
 
-   <CODE BEGINS>file "ietf-l2vpn-ntw@2020-04-30.yang"
+   <CODE BEGINS>file "ietf-l2vpn-ntw@2020-05-26.yang"
    module ietf-l2vpn-ntw {
      yang-version 1.1;
      namespace "urn:ietf:params:xml:ns:yang:ietf-l2vpn-ntw";
@@ -1038,6 +1038,12 @@ Internet-Draft                    L2NM                        April 2020
        reference
          "RFC NNNN: A Layer 3 VPN Network YANG Model";
      }
+     import ietf-l2vpn-svc {
+       prefix l2vpn-svc;
+       reference
+         "RFC 8466: YANG Data Model for Layer 2 Virtual Private
+           Network (L2VPN) Service Delivery";
+     }
      import ietf-packet-fields {
        prefix pf;
        reference
@@ -1052,20 +1058,20 @@ Internet-Draft                    L2NM                        April 2020
 
      organization
        "IETF OPSA (Operations and Management Area) Working Group";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 19]
+
+Internet-Draft                    L2NM                          May 2020
+
+
      contact
        "WG Web:   <http://tools.ietf.org/wg/opsawg/>
            WG List:  <mailto:opsawg@ietf.org>
            Editor:    Samier Barguil
                      <mailto:samier.barguilgiraldo.ext@telefonica.com>
            Editor:    Oscar Gonzalez de Dios
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 19]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                      <mailto:oscar.gonzalezdedios@telefonica.com>
            Author:    Mohamed Boucadair
                      <mailto:mohamed.boucadair@orange.com>
@@ -1095,7 +1101,7 @@ Internet-Draft                    L2NM                        April 2020
         (https://www.rfc-editor.org/info/rfcXXXX); see the RFC itself
         for full legal notices.";
 
-     revision 2020-04-30 {
+     revision 2020-05-26 {
        description
          "Third revision -02 version";
        reference
@@ -1108,19 +1114,20 @@ Internet-Draft                    L2NM                        April 2020
        description
          "Indicates the support of multicast-like capabilities
           in a L2VPN.";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 20]
+
+Internet-Draft                    L2NM                          May 2020
+
+
      }
 
      feature extranet-vpn {
        description
          "Indicates the Support of Extranet VPN.";
      }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 20]
-
-Internet-Draft                    L2NM                        April 2020
-
 
      feature target-sites {
        description
@@ -1163,6 +1170,14 @@ Internet-Draft                    L2NM                        April 2020
 
      feature micro-bfd {
        description
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 21]
+
+Internet-Draft                    L2NM                          May 2020
+
+
          "Indicates the support of Micro-BFD.";
      }
 
@@ -1170,13 +1185,6 @@ Internet-Draft                    L2NM                        April 2020
        description
          "Indicates the support of BFD.";
      }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 21]
-
-Internet-Draft                    L2NM                        April 2020
-
 
      feature signaling-options {
        description
@@ -1218,6 +1226,14 @@ Internet-Draft                    L2NM                        April 2020
      }
 
      feature lag-interface {
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 22]
+
+Internet-Draft                    L2NM                          May 2020
+
+
        description
          "Enable lag-interface.";
      }
@@ -1226,13 +1242,6 @@ Internet-Draft                    L2NM                        April 2020
        description
          "Indicates the support of VLAN.";
      }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 22]
-
-Internet-Draft                    L2NM                        April 2020
-
 
      feature dot1q {
        description
@@ -1274,6 +1283,13 @@ Internet-Draft                    L2NM                        April 2020
          "Indicates the support in a VPN.";
      }
 
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 23]
+
+Internet-Draft                    L2NM                          May 2020
+
+
      feature lan-tag {
        description
          "Indicates the LAN Tag support in a VPN.";
@@ -1282,14 +1298,6 @@ Internet-Draft                    L2NM                        April 2020
      /* Typedefs */
 
      typedef protocol-type {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 23]
-
-Internet-Draft                    L2NM                        April 2020
-
-
        type enumeration {
          enum GRE {
            value 0;
@@ -1300,16 +1308,22 @@ Internet-Draft                    L2NM                        April 2020
            value 1;
            description
              "Transport based on LDP.";
+           reference
+             "RFC 5036: LDP Specification";
          }
          enum BGP {
            value 2;
            description
              "Transport based on BGP.";
+           reference
+             "RFC 4760: Multiprotocol Extensions for BGP-4";
          }
          enum SR {
            value 3;
            description
              "Transport based on Segment Routing";
+           reference
+            "RFC 8660: Segment Routing with the MPLS Data Plane";
          }
          enum SR-TE {
            value 4;
@@ -1321,7 +1335,17 @@ Internet-Draft                    L2NM                        April 2020
            value 5;
            description
              "Transport based on RSVP-TE signaled tunnels";
+           reference
+            "RFC 3209: RSVP-TE: Extensions to RSVP for LSP Tunnels";
          }
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 24]
+
+Internet-Draft                    L2NM                          May 2020
+
+
        }
        description
          "This are attributes used to identify underly
@@ -1338,14 +1362,6 @@ Internet-Draft                    L2NM                        April 2020
          enum down {
            value 1;
            description
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 24]
-
-Internet-Draft                    L2NM                        April 2020
-
-
              "Operational status DOWN";
          }
          enum unknown {
@@ -1378,6 +1394,14 @@ Internet-Draft                    L2NM                        April 2020
        type enumeration {
          enum peer {
            description
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 25]
+
+Internet-Draft                    L2NM                          May 2020
+
+
              "Peer mode, i.e., participate in the protocol towards
               the CE. Peering is common for LACP  and E-LMI and
               occasionally for LLDP. For virtual private services
@@ -1394,14 +1418,6 @@ Internet-Draft                    L2NM                        April 2020
            description
              "Discard mode,i.e.,discard the frame.";
          }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 25]
-
-Internet-Draft                    L2NM                        April 2020
-
-
        }
        description
          "Defining a type of the control mode on L2CP protocols.";
@@ -1425,101 +1441,35 @@ Internet-Draft                    L2NM                        April 2020
      /* Identities */
 
      identity multicast-tree-type {
+       base l2vpn-svc:multicast-tree-type;
        description
          "Base identity for multicast tree type.";
      }
 
-     identity ssm-tree-type {
-       base multicast-tree-type;
-       description
-         "Identity for SSM tree type.";
-     }
-
-     identity asm-tree-type {
-       base multicast-tree-type;
-       description
-         "Identity for ASM tree type.";
-     }
-
-     identity bidir-tree-type {
-       base multicast-tree-type;
-       description
-         "Identity for bidirectional tree type.";
-     }
-
      identity mapping-type {
+       base l2vpn-svc:multicast-gp-address-mapping;
        description
          "Identity mapping-type.";
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 26]
+Barguil, et al.         Expires November 27, 2020              [Page 26]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
-     }
-
-     identity static-mapping {
-       base mapping-type;
-       description
-         "Identity for static mapping, i.e.,attach the interface
-          to the Multicast group as static member";
-     }
-
-     identity dynamic-mapping {
-       base mapping-type;
-       description
-         "Identity for dynamic mapping, i.e.,interface was added
-          to the Multicast group as a result of snooping";
      }
 
      identity tf-type {
+       base l2vpn-svc:tf-type;
        description
          "Identity traffic-type";
      }
 
-     identity multicast-traffic {
-       base tf-type;
-       description
-         "Identity for multicast traffic";
-     }
-
-     identity broadcast-traffic {
-       base tf-type;
-       description
-         "Identity for broadcast traffic";
-     }
-
-     identity unknown-unicast-traffic {
-       base tf-type;
-       description
-         "Identity for unknown unicast traffic";
-     }
-
      identity pwe-encapsulation-type {
+       base l2vpn-svc:encapsulation-type;
        description
          "Identity pwe-encapsulation-type";
-     }
-
-     identity ethernet-over-mpls {
-       base pwe-encapsulation-type;
-       description
-         "Identity for ethernet over mpls";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 27]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-     }
-
-     identity ethernet-tagged-mpls {
-       base pwe-encapsulation-type;
-       description
-         "Identity for ethernet tagged over mpls";
      }
 
      identity l2tp-pw-type {
@@ -1556,20 +1506,20 @@ Internet-Draft                    L2NM                        April 2020
           protected by a backup circuit, typically meeting certain
           diverse path/fiber/site/node criteria.  Both primary and
           protection circuits are provisioned to be in the active
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 27]
+
+Internet-Draft                    L2NM                          May 2020
+
+
           forward ing state. The subscriber may choose to send the
           same service frames across both circuits simultaneously.";
      }
 
      identity one-to-one {
        base protection-mode;
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 28]
-
-Internet-Draft                    L2NM                        April 2020
-
-
        description
          "In this scheme, a backup circuit to the primary
           circuit is provisioned.  Depending on the implementation
@@ -1579,52 +1529,16 @@ Internet-Draft                    L2NM                        April 2020
      }
 
      identity eth-inf-type {
+       base l2vpn-svc:eth-inf-type;
        description
          "Identity of Ethernet Interface Type";
      }
 
-     identity phy-inf {
-       base eth-inf-type;
-       description
-         "Identity of Physical Interface type";
-     }
-
-     identity lag-inf {
-       base eth-inf-type;
-       description
-         "Identity of LAG Interface type";
-     }
-
      identity bw-type {
+       base l2vpn-svc:bw-type;
        description
          "Identity of bandwidth";
      }
-
-     identity bw-per-cos {
-       base bw-type;
-       description
-         "Bandwidth is per cos";
-     }
-
-     identity bw-per-port {
-       base bw-type;
-       description
-         "Bandwidth is per site network access";
-     }
-
-     identity opaque {
-       base bw-type;
-       description
-         "Opaque";
-     }
-
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 29]
-
-Internet-Draft                    L2NM                        April 2020
-
 
      identity site-type {
        description
@@ -1644,156 +1558,42 @@ Internet-Draft                    L2NM                        April 2020
      }
 
      identity service-type {
+       base l2vpn-svc:service-type;
        description
          "Base Identity of service type.";
      }
 
-     identity vpws {
-       base service-type;
-       description
-         " point-to-point Virtual Private Wire Services(VPWS) type.";
-     }
-
-     identity pwe3 {
-       base service-type;
-       description
-         " Pseudo-Wire Emulation Edge to
-          Edge(PWE3)Service type. .";
-     }
-
-     identity ldp-l2tp-vpls {
-       base service-type;
-       description
-         "LDP based or L2TP based multipoint Virtual Private LAN
-          services (VPLS) Service Type. This VPLS uses LDP-signaled
-          Pseudowires or L2TP signaled Pseudowires.";
-     }
-
-     identity bgp-vpls {
-       base service-type;
-       description
-         "BGP based multipoint Virtual Private LAN services (VPLS)
-          Service Type. This VPLS uses a Border Gateway Protocol (BGP)
 
 
-
-Barguil, et al.         Expires November 1, 2020               [Page 30]
+Barguil, et al.         Expires November 27, 2020              [Page 28]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
-
-          control plane as described in RFC4761 and RFC6624.";
-     }
-
-     identity vpws-evpn {
-       base service-type;
-       description
-         "VPWS Service Type using Ethernet VPN(EVPN) specified in
-          RFC 7432.";
-     }
-
-     identity pbb-evpn {
-       base service-type;
-       description
-         "PBB Service Type using Ethernet VPN(EVPN) specified in
-          RFC 7432.";
-     }
 
      identity bundling-type {
+       base l2vpn-svc:bundling-type;
        description
          "This is base identity for Bundling type. It supports
           multiple CE-VLAN associated with L2VPN service or all
           CE-VLANs associated with L2VPN service.";
      }
 
-     identity multi-svc-bundling {
-       base bundling-type;
-       description
-         "Identity for multiple service bundling,i.e.,
-          multiple CE-VLAN IDs can be associated with an
-          L2VPN Service at site.";
-     }
-
-     identity one-to-one-bundling {
-       base bundling-type;
-       description
-         "Identity for one to one service bundling,i.e.,
-          Each L2VPN can be associated with only one CE-VLAN IDs
-          at site.";
-     }
-
-     identity all-to-one-bundling {
-       base bundling-type;
-       description
-         "Identity for all to one bundling,i.e.,all CE-VLAN IDs
-          are mapped to one L2VPN Service.";
-     }
-
      identity color-id {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 31]
-
-Internet-Draft                    L2NM                        April 2020
-
-
+       base l2vpn-svc:color-id;
        description
          "base identity of color id";
      }
 
-     identity color-id-cvlan {
-       base color-id;
-       description
-         "Identity of color id base on  CVLAN ";
-     }
-
      identity cos-id {
+       base l2vpn-svc:cos-id;
        description
          "Identity of class of service id";
      }
 
-     identity cos-id-pcp {
-       base cos-id;
-       description
-         "Identity of cos id based on PCP";
-     }
-
-     identity cos-id--dscp {
-       base cos-id;
-       description
-         "Identity of cos id based on DSCP";
-     }
-
      identity color-type {
+       base l2vpn-svc:color-type;
        description
          "Identity of color types";
-     }
-
-     identity green {
-       base color-type;
-       description
-         "Identity of green type";
-     }
-
-     identity yellow {
-       base color-type;
-       description
-         "Identity of yellow type";
-     }
-
-     identity red {
-       base color-type;
-       description
-         "Identity of red type";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 32]
-
-Internet-Draft                    L2NM                        April 2020
-
-
      }
 
      identity perf-tier-opt {
@@ -1819,6 +1619,13 @@ Internet-Draft                    L2NM                        April 2020
          "Identity of continental";
      }
 
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 29]
+
+Internet-Draft                    L2NM                          May 2020
+
+
      identity global {
        base perf-tier-opt;
        description
@@ -1842,125 +1649,48 @@ Internet-Draft                    L2NM                        April 2020
          "Identity of two-rate, three-color (2R3C)";
      }
 
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 33]
-
-Internet-Draft                    L2NM                        April 2020
-
-
      identity bum-type {
+       base l2vpn-svc:bum-type;
        description
          "Identity of BUM type";
      }
 
-     identity broadcast {
-       base bum-type;
-       description
-         "Identity of broadcast";
-     }
-
-     identity unicast {
-       base bum-type;
-       description
-         "Identity of unicast";
-     }
-
-     identity multicast {
-       base bum-type;
-       description
-         "Identity of multicast";
-     }
-
      identity loop-prevention-type {
+       base l2vpn-svc:loop-prevention-type;
        description
          "Identity of loop prevention";
      }
 
-     identity shut {
-       base loop-prevention-type;
-       description
-         "Identity of shut protection";
-     }
-
-     identity trap {
-       base loop-prevention-type;
-       description
-         "Identity of trap protection";
-     }
-
      identity lacp-state {
+       base l2vpn-svc:lacp-state;
        description
          "Identity of LACP state";
      }
 
-     identity lacp-on {
-       base lacp-state;
-       description
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 34]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-         "Identity of LCAP on";
-     }
-
-     identity lacp-off {
-       base lacp-state;
-       description
-         "Identity of LACP off";
-     }
-
      identity lacp-mode {
+     base l2vpn-svc:lacp-mode;
        description
          "Identity of LACP mode";
      }
 
-     identity lacp-passive {
-       base lacp-mode;
-       description
-         "Identity of LACP passive";
-     }
-
-     identity lacp-active {
-       base lacp-mode;
-       description
-         "Identity of LACP active";
-     }
-
      identity lacp-speed {
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 30]
+
+Internet-Draft                    L2NM                          May 2020
+
+
+       base l2vpn-svc:lacp-speed;
        description
          "Identity of LACP speed";
-     }
-
-     identity lacp-fast {
-       base lacp-speed;
-       description
-         "Identity of LACP fast";
-     }
-
-     identity lacp-slow {
-       base lacp-speed;
-       description
-         "Identity of LACP slow";
      }
 
      identity vpn-signaling-type {
        description
          "Identity of VPN signaling types";
      }
-
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 35]
-
-Internet-Draft                    L2NM                        April 2020
-
 
      identity l2vpn-bgp {
        base vpn-signaling-type;
@@ -2000,6 +1730,14 @@ Internet-Draft                    L2NM                        April 2020
      identity vpls-type {
        base t-ldp-pwe-type;
        description
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 31]
+
+Internet-Draft                    L2NM                          May 2020
+
+
          "Identity for vpls";
      }
 
@@ -2010,14 +1748,6 @@ Internet-Draft                    L2NM                        April 2020
      }
 
      identity l2vpn-type {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 36]
-
-Internet-Draft                    L2NM                        April 2020
-
-
        description
          "Layer 2 VPN types";
      }
@@ -2057,87 +1787,33 @@ Internet-Draft                    L2NM                        April 2020
          " Provider Backbone Bridging Support in EVPN.";
      }
 
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 32]
+
+Internet-Draft                    L2NM                          May 2020
+
+
      identity management {
+       base l2vpn-svc:management;
        description
          "Base identity for site management scheme.";
      }
 
-     identity co-managed {
-       base management;
-       description
-         "Base identity for co-managed site.";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 37]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-     }
-
-     identity customer-managed {
-       base management;
-       description
-         "Base identity for customer managed site.";
-     }
-
-     identity provider-managed {
-       base management;
-       description
-         "Base identity for provider managed site.";
-     }
-
      identity address-family {
+       base l2vpn-svc:address-family;
        description
          "Base identity for an address family.";
      }
 
-     identity ipv4 {
-       base address-family;
-       description
-         "Identity for IPv4 address family.";
-     }
-
-     identity ipv6 {
-       base address-family;
-       description
-         "Identity for IPv6 address family.";
-     }
-
      identity vpn-topology {
+       base l3vpn-ntw:vpn-topology;
        description
          "Base identity for VPN topology.";
      }
 
-     identity any-to-any {
-       base vpn-topology;
-       description
-         "Identity for any to any VPN topology.";
-     }
-
-     identity hub-spoke {
-       base vpn-topology;
-       description
-         "Identity for Hub'n'Spoke VPN topology.";
-     }
-
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 38]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-     identity hub-spoke-disjoint {
-       base vpn-topology;
-       description
-         "Identity for Hub'n'Spoke VPN topology
-          where Hubs cannot talk between each other.";
-     }
-
      identity site-role {
+       base l2vpn-svc:site-role;
        description
          "Base identity for site type.";
      }
@@ -2145,198 +1821,46 @@ Internet-Draft                    L2NM                        April 2020
      identity any-to-any-role {
        base site-role;
        description
-         "Site in an any to any IPVPN.";
-     }
-
-     identity spoke-role {
-       base site-role;
-       description
-         "Spoke Site in a Hub and Spoke IPVPN.";
-     }
-
-     identity hub-role {
-       base site-role;
-       description
-         "Hub Site in a Hub and Spoke IPVPN.";
+         "Any-to-any-role site type.";
      }
 
      identity pm-type {
+       base l2vpn-svc:pm-type;
        description
          "Performance monitor type";
      }
 
-     identity loss {
-       base pm-type;
-       description
-         "Loss measurement";
-     }
-
-     identity delay {
-       base pm-type;
-       description
-         "Delay measurement";
-     }
-
      identity fault-alarm-defect-type {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 39]
-
-Internet-Draft                    L2NM                        April 2020
-
-
+       base l2vpn-svc:fault-alarm-defect-type;
        description
          "Indicating the alarm priority defect";
      }
 
-     identity remote-rdi {
-       base fault-alarm-defect-type;
-       description
-         "Indicates the aggregate health of the remote MEPs.";
-     }
-
-     identity remote-mac-error {
-       base fault-alarm-defect-type;
-       description
-         "Indicates that one or more of the remote MEPs is
-          reporting a failure in its Port Status TLV or
-          Interface Status TLV.";
-     }
-
-     identity remote-invalid-ccm {
-       base fault-alarm-defect-type;
-       description
-         "Indicates that at least one of the Remote MEP
-          state machines is not receiving valid CCMs
-          from its remote MEP.";
-     }
-
-     identity invalid-ccm {
-       base fault-alarm-defect-type;
-       description
-         "Indicates that one or more invalid CCMs has been
-          received and that 3.5 times that CCMs transmission
-          interval has not yet expired.";
-     }
-
-     identity cross-connect-ccm {
-       base fault-alarm-defect-type;
-       description
-         "Indicates that one or more cross connect CCMs has been
-          received and that 3.5 times of at least one of those
-          CCMs transmission interval has not yet expired.";
-     }
-
      identity frame-delivery-mode {
+      base l2vpn-svc:frame-delivery-mode;
        description
          "Delivery types";
      }
 
-     identity discard {
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 40]
+Barguil, et al.         Expires November 27, 2020              [Page 33]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
-
-       base frame-delivery-mode;
-       description
-         "Service Frames are discarded.";
-     }
-
-     identity unconditional {
-       base frame-delivery-mode;
-       description
-         "Service Frames are unconditionally
-          delivered to the destination site.";
-     }
-
-     identity unknown-discard {
-       base frame-delivery-mode;
-       description
-         "Service Frame are conditionally
-          delivered to the destination site and
-          the packet with unknown destination address
-          will be discarded.";
-     }
 
      identity pw-topo-type {
+       base l2vpn-svc:site-network-access-type;
        description
          "base identity for pw topology Type";
      }
 
-     identity point-to-point {
-       base pw-topo-type;
-       description
-         "identity for Point to Point.";
-     }
-
-     identity multipoint-to-point {
-       base pw-topo-type;
-       description
-         "identity for Multipoint to point.";
-     }
-
-     identity point-to-multipoint {
-       base pw-topo-type;
-       description
-         "Identity for point to Multipoint.";
-     }
-
      identity placement-diversity {
+      base l2vpn-svc:placement-diversity;
        description
          "Base identity for site placement
           constraints";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 41]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-     }
-
-     identity bearer-diverse {
-       base placement-diversity;
-       description
-         "Identity for bearer diversity.
-          The bearers should not use common elements.";
-     }
-
-     identity pe-diverse {
-       base placement-diversity;
-       description
-         "Identity for PE diversity";
-     }
-
-     identity pop-diverse {
-       base placement-diversity;
-       description
-         "Identity for POP diversity";
-     }
-
-     identity linecard-diverse {
-       base placement-diversity;
-       description
-         "Identity for linecard diversity";
-     }
-
-     identity same-pe {
-       base placement-diversity;
-       description
-         "Identity for having sites connected
-          on the same PE";
-     }
-
-     identity same-bearer {
-       base placement-diversity;
-       description
-         "Identity for having sites connected
-          using the same bearer";
      }
 
      identity l2-access-type {
@@ -2346,14 +1870,6 @@ Internet-Draft                    L2NM                        April 2020
      }
 
      identity untag {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 42]
-
-Internet-Draft                    L2NM                        April 2020
-
-
        base l2-access-type;
        description
          "Untag";
@@ -2383,6 +1899,13 @@ Internet-Draft                    L2NM                        April 2020
          "Create a default sub-interface and keep vlan.";
      }
 
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 34]
+
+Internet-Draft                    L2NM                          May 2020
+
+
      identity atm {
        base l2-access-type;
        description
@@ -2396,85 +1919,27 @@ Internet-Draft                    L2NM                        April 2020
      }
 
      identity provision-model {
+      base l2vpn-svc:provision-model;
        description
          "base identity for provision model.";
      }
 
-     identity single-side-provision {
-       description
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 43]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-         "Identity for single side provisioning with discovery.";
-     }
-
-     identity doubled-side-provision {
-       description
-         "Identity for double signle provisioning.";
-     }
-
      identity mac-learning-mode {
+      base l2vpn-svc:mac-learning-mode;
        description
          "MAC learning mode";
      }
 
-     identity data-plane {
-       base mac-learning-mode;
-       description
-         "User MAC addresses are learned through ARP broadcast.";
-     }
-
-     identity control-plane {
-       base mac-learning-mode;
-       description
-         "User MAC addresses are advertised through EVPN-BGP";
-     }
-
      identity vpn-policy-filter-type {
+      base l2vpn-svc:vpn-policy-filter-type;
        description
          "Base identity for filter type.";
      }
 
-     identity lan {
-       base vpn-policy-filter-type;
-       description
-         "Identity for lan tag filter type.";
-     }
-
      identity mac-action {
+      base l2vpn-svc:mac-action;
        description
          "Base identity for MAC action.";
-     }
-
-     identity drop {
-       base mac-action;
-       description
-         "Identity for packet drop.";
-     }
-
-     identity flood {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 44]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-       base mac-action;
-       description
-         "Identity for packet flooding.";
-     }
-
-     identity warning {
-       base mac-action;
-       description
-         "Identity for sending a warning log message.";
      }
 
      identity load-balance-method {
@@ -2489,6 +1954,13 @@ Internet-Draft                    L2NM                        April 2020
           applied to Pseudowires across MPLS
           network.";
      }
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 35]
+
+Internet-Draft                    L2NM                          May 2020
+
 
      identity entropy-label {
        base load-balance-method;
@@ -2506,163 +1978,21 @@ Internet-Draft                    L2NM                        April 2020
      }
 
      identity qos-profile-direction {
+      base l2vpn-svc:qos-profile-direction;
        description
          "Base identity for qos profile direction.";
      }
 
-     identity site-to-wan {
-       base qos-profile-direction;
-       description
-         "Identity for Site to WAN direction.";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 45]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-     }
-
-     identity wan-to-site {
-       base qos-profile-direction;
-       description
-         "Identity for WAN to Site direction.";
-     }
-
-     identity bidirectional {
-       base qos-profile-direction;
-       description
-         "Identity for both WAN to Site direction and Site to WAN
-          direction.";
-     }
-
      identity vxlan-peer-mode {
+      base l2vpn-svc:vxlan-peer-mode;
        description
          "Base identity for vxlan peer mode.";
      }
 
-     identity static-mode {
-       base vxlan-peer-mode;
-       description
-         "Identity for the vxlan access in static mode.";
-     }
-
-     identity bgp-mode {
-       base vxlan-peer-mode;
-       description
-         "Identity for the vxlan access by bgp evpn learning.";
-     }
-
      identity customer-application {
+      base l2vpn-svc:customer-application;
        description
          "Base identity for customer application.";
-     }
-
-     identity web {
-       base customer-application;
-       description
-         "Identity for Web application (e.g., HTTP, HTTPS).";
-     }
-
-     identity mail {
-       base customer-application;
-       description
-         "Identity for mail application.";
-     }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 46]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-     identity file-transfer {
-       base customer-application;
-       description
-         "Identity for file transfer application (e.g., FTP, SFTP).";
-     }
-
-     identity database {
-       base customer-application;
-       description
-         "Identity for database application.";
-     }
-
-     identity social {
-       base customer-application;
-       description
-         "Identity for social-network application.";
-     }
-
-     identity games {
-       base customer-application;
-       description
-         "Identity for gaming application.";
-     }
-
-     identity p2p {
-       base customer-application;
-       description
-         "Identity for peer-to-peer application.";
-     }
-
-     identity network-management {
-       base customer-application;
-       description
-         "Identity for management application
-          (e.g., Telnet, syslog, SNMP).";
-     }
-
-     identity voice {
-       base customer-application;
-       description
-         "Identity for voice application.";
-     }
-
-     identity video {
-       base customer-application;
-       description
-         "Identity for video conference application.";
-     }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 47]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-     identity embb {
-       base customer-application;
-       description
-         "Identity for enhanced Mobile Broadband(eMBB)
-          application. Note that eMBB application demands
-          the network performance with wide variety of
-          characteristics such as data rate, latency,
-          loss rate, reliability and many other parameters.";
-     }
-
-     identity urllc {
-       base customer-application;
-       description
-         "Identity for Ultra-Reliable and Low Latency
-          Communications (URLLC) application. Note that
-          URLLC application demands the network performance
-          with wide variety of characteristics such as latency,
-          reliability and many other parameters.";
-     }
-
-     identity mmtc {
-       base customer-application;
-       description
-         "Identity for massive Machine Type
-          Communications (mMTC) application. Note that
-          mMTC application demands the network performance
-          with wide variety of characteristics such as data
-          rate, latency, loss rate, reliability and many
-          other parameters.";
      }
 
      identity precedence-type {
@@ -2680,15 +2010,16 @@ Internet-Draft                    L2NM                        April 2020
      identity backup {
        base precedence-type;
        description
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 36]
+
+Internet-Draft                    L2NM                          May 2020
+
+
          "Identifies the Backup L2VPN.";
      }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 48]
-
-Internet-Draft                    L2NM                        April 2020
-
 
      /* Groupings */
 
@@ -2735,36 +2066,22 @@ Internet-Draft                    L2NM                        April 2020
            description
              "Reference to a VRF import policy.";
          }
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 37]
+
+Internet-Draft                    L2NM                          May 2020
+
+
          leaf export-policy {
            type string;
            description
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 49]
-
-Internet-Draft                    L2NM                        April 2020
-
-
              "Reference to a VRF export policy.";
          }
        }
      }
 
-     grouping svc-transport-encapsulation {
-       container transport-encapsulation {
-         leaf-list protocol {
-           type protocol-type;
-           ordered-by user;
-           description
-             "Protocols used to support transport";
-         }
-         description
-           "";
-       }
-       description
-         "";
-     }
 
      grouping split-horizon-group {
        container split-horizon {
@@ -2780,33 +2097,6 @@ Internet-Draft                    L2NM                        April 2020
          "Configuration with split horizon enabled";
      }
 
-     grouping site-bearer-params {
-       container site-bearers {
-         leaf bearer-id {
-           type string;
-           description
-             "Unique identifier for a bearer. This
-              identifies shall be mapped to the bearer-reference
-              on a vpn-network-access.";
-         }
-         description
-           "Container that encloses all the bearers
-            connected to a site. A bearer is mapped one to one
-            to a port on the PE router.";
-       }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 50]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-       description
-         "Container that encloses all the bearers
-          connected to a site. A bearer is mapped one to one
-          to a port on the PE router.";
-     }
 
      grouping svc-precedence {
        container svc-precedence {
@@ -2832,6 +2122,14 @@ Internet-Draft                    L2NM                        April 2020
          if-feature "cloud-access";
          list cloud-access {
            key "cloud-identifier";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 38]
+
+Internet-Draft                    L2NM                          May 2020
+
+
            leaf cloud-identifier {
              type string;
              description
@@ -2850,14 +2148,6 @@ Internet-Draft                    L2NM                        April 2020
                leaf-list permit-site {
                  type leafref {
                    path "/l2vpn-ntw/sites/site/site-id";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 51]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                  }
                  description
                    "Site ID to be authorized.";
@@ -2888,6 +2178,14 @@ Internet-Draft                    L2NM                        April 2020
                description
                  "List of authorized sites.";
              }
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 39]
+
+Internet-Draft                    L2NM                          May 2020
+
+
              description
                "Configuration of authorized sites.";
            }
@@ -2906,14 +2204,6 @@ Internet-Draft                    L2NM                        April 2020
              }
              description
                "Configuration of denied sites.";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 52]
-
-Internet-Draft                    L2NM                        April 2020
-
-
            }
            description
              "Cloud access configuration.";
@@ -2944,6 +2234,14 @@ Internet-Draft                    L2NM                        April 2020
            }
            container management {
              leaf address {
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 40]
+
+Internet-Draft                    L2NM                          May 2020
+
+
                type inet:ip-address;
                description
                  "Address";
@@ -2962,14 +2260,6 @@ Internet-Draft                    L2NM                        April 2020
              "List of devices";
          }
          description
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 53]
-
-Internet-Draft                    L2NM                        April 2020
-
-
            "Devices configuration";
        }
        description
@@ -3000,6 +2290,14 @@ Internet-Draft                    L2NM                        April 2020
              type string;
              description
                "Unique identifier for the VPN policy.";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 41]
+
+Internet-Draft                    L2NM                          May 2020
+
+
            }
            list entries {
              key "id";
@@ -3018,14 +2316,6 @@ Internet-Draft                    L2NM                        April 2020
                    }
                    description
                      "Type of VPN Policy filter.";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 54]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                  }
 
                  description
@@ -3056,6 +2346,14 @@ Internet-Draft                    L2NM                        April 2020
                    base site-role;
                  }
                  default "any-to-any-role";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 42]
+
+Internet-Draft                    L2NM                          May 2020
+
+
                  description
                    "Role of the site in the IP VPN.";
                }
@@ -3074,13 +2372,6 @@ Internet-Draft                    L2NM                        April 2020
        description
          "VPN policy parameters for the site.";
      }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 55]
-
-Internet-Draft                    L2NM                        April 2020
-
 
      grouping bum-frame-delivery {
        container bum-frame-delivery-modes {
@@ -3111,6 +2402,14 @@ Internet-Draft                    L2NM                        April 2020
        }
        description
          "Grouping for unicast, mulitcast, broadcast frame delivery";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 43]
+
+Internet-Draft                    L2NM                          May 2020
+
+
      }
 
      grouping cvlan-svc-map-grouping {
@@ -3130,14 +2429,6 @@ Internet-Draft                    L2NM                        April 2020
              description
                "CVLAN ID";
            }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 56]
-
-Internet-Draft                    L2NM                        April 2020
-
-
            description
              "List of CVLAN-ID to SVC Map configurations";
          }
@@ -3167,6 +2458,14 @@ Internet-Draft                    L2NM                        April 2020
              description
                "ZIP code of the site.";
            }
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 44]
+
+Internet-Draft                    L2NM                          May 2020
+
+
            leaf state {
              type string;
              description
@@ -3186,14 +2485,6 @@ Internet-Draft                    L2NM                        April 2020
            }
            description
              "List for location";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 57]
-
-Internet-Draft                    L2NM                        April 2020
-
-
          }
          description
            "Location of the site.";
@@ -3223,6 +2514,14 @@ Internet-Draft                    L2NM                        April 2020
          }
          description
            "Diversity constraint type.";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 45]
+
+Internet-Draft                    L2NM                          May 2020
+
+
        }
        description
          "This grouping defines site diversity parameters";
@@ -3242,14 +2541,6 @@ Internet-Draft                    L2NM                        April 2020
            description
              "Enables multicast.";
          }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 58]
-
-Internet-Draft                    L2NM                        April 2020
-
-
          container customer-tree-flavors {
            leaf-list tree-flavor {
              type identityref {
@@ -3261,13 +2552,6 @@ Internet-Draft                    L2NM                        April 2020
            description
              "Type of trees used by customer.";
          }
-         /*leaf traffic-type {
-         type identityref {
-         base tf-type;
-         }
-         description
-         "Traffic Type";
-         }*/
          uses bum-frame-delivery;
          leaf multicast-gp-port-mapping {
            type identityref {
@@ -3286,6 +2570,14 @@ Internet-Draft                    L2NM                        April 2020
 
      grouping vpn-extranet {
        container extranet-vpns {
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 46]
+
+Internet-Draft                    L2NM                          May 2020
+
+
          if-feature "extranet-vpn";
          list extranet-vpn {
            key "vpn-id";
@@ -3298,14 +2590,6 @@ Internet-Draft                    L2NM                        April 2020
              type identityref {
                base site-role;
              }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 59]
-
-Internet-Draft                    L2NM                        April 2020
-
-
              default "any-to-any-role";
              description
                "This describes the role of the
@@ -3342,6 +2626,14 @@ Internet-Draft                    L2NM                        April 2020
            leaf vpn-id {
              type leafref {
                path "/l2vpn-ntw/vpn-services/vpn-service/vpn-id";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 47]
+
+Internet-Draft                    L2NM                          May 2020
+
+
              }
              description
                "Identifies the target VPN";
@@ -3354,20 +2646,13 @@ Internet-Draft                    L2NM                        April 2020
                "L2VPN types";
            }
            leaf pwe-encapsulation-type {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 60]
-
-Internet-Draft                    L2NM                        April 2020
-
-
              type identityref {
                base pwe-encapsulation-type;
              }
              description
                "PWE Encapsulation Type";
            }
+           uses vpn-route-targets;
            container pwe-mtu {
              leaf allow-mtu-mismatch {
                type boolean;
@@ -3397,6 +2682,14 @@ Internet-Draft                    L2NM                        April 2020
              type leafref {
                path "/l2vpn-ntw/vpn-services/vpn-service/vpn-id";
              }
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 48]
+
+Internet-Draft                    L2NM                          May 2020
+
+
              description
                "Identifies the target EVPN";
            }
@@ -3410,14 +2703,6 @@ Internet-Draft                    L2NM                        April 2020
            leaf address-family {
              type identityref {
                base address-family;
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 61]
-
-Internet-Draft                    L2NM                        April 2020
-
-
              }
              description
                "Address family used for management.";
@@ -3453,6 +2738,14 @@ Internet-Draft                    L2NM                        April 2020
            }
            leaf pwe-encapsulation-type {
              type identityref {
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 49]
+
+Internet-Draft                    L2NM                          May 2020
+
+
                base pwe-encapsulation-type;
              }
              description
@@ -3466,14 +2759,6 @@ Internet-Draft                    L2NM                        April 2020
            container pwe-mtu {
              leaf allow-mtu-mismatch {
                type boolean;
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 62]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                description
                  "Allow MTU mismatch";
              }
@@ -3509,6 +2794,14 @@ Internet-Draft                    L2NM                        April 2020
              }
              leaf pw-priority {
                type uint32;
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 50]
+
+Internet-Draft                    L2NM                          May 2020
+
+
                description
                  "Defines the priority for the PW.
                   The higher the pw-priority value,
@@ -3522,14 +2815,6 @@ Internet-Draft                    L2NM                        April 2020
                description
                  "Only applies when t-ldp pwe type is h-vpls.";
              }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 63]
-
-Internet-Draft                    L2NM                        April 2020
-
-
              leaf s-tag {
                type uint32;
                description
@@ -3565,6 +2850,14 @@ Internet-Draft                    L2NM                        April 2020
              description
                "Encapsulation type";
            }
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 51]
+
+Internet-Draft                    L2NM                          May 2020
+
+
            leaf control-word {
              type boolean;
              description
@@ -3578,29 +2871,10 @@ Internet-Draft                    L2NM                        April 2020
                  "Peer IP address.";
              }
              leaf vc-id {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 64]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                type string;
                description
                  "VC lable used to identify PW.";
              }
-             /*
-             leaf ac-group-id {
-             type leafref{
-             path "../../../../../"+
-             "vpn-network-accesses/vpn-network-access/"+
-             "access-diversity/groups/group/group-id";
-             }
-             description
-             "Reference to Network Access Group ID.";
-             }
-              */
              leaf pw-type {
                type identityref {
                  base pw-topo-type;
@@ -3626,42 +2900,20 @@ Internet-Draft                    L2NM                        April 2020
          "Grouping for signaling option";
      }
 
-     /*
-     grouping load-balance-grouping {
-     leaf enable {
-     type boolean;
-     description
-     "Enable load balancing";
-     }
-     leaf load-balance-method {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 65]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-     type identityref {
-     base load-balance-method;
-
-     }
-     description
-     "select load balancing method such as
-     fat-pw, entropy-label, or
-     vxlan-source-udp-port.";
-     }
-     description
-     "Grouping for load balance ";
-     }
-      */
-
      grouping operational-requirements-ops {
        leaf actual-site-start {
          type yang:date-and-time;
          config false;
          description
            "Optional leaf indicating actual date
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 52]
+
+Internet-Draft                    L2NM                          May 2020
+
+
             and time when the service at a particular
             site actually started";
        }
@@ -3690,14 +2942,6 @@ Internet-Draft                    L2NM                        April 2020
           parameters";
      }
 
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 66]
-
-Internet-Draft                    L2NM                        April 2020
-
-
      grouping cfm-802-grouping {
        leaf maid {
          type string;
@@ -3718,6 +2962,14 @@ Internet-Draft                    L2NM                        April 2020
          type enumeration {
            enum up {
              description
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 53]
+
+Internet-Draft                    L2NM                          May 2020
+
+
                "MEP up";
            }
            enum down {
@@ -3746,14 +2998,6 @@ Internet-Draft                    L2NM                        April 2020
        leaf ccm-holdtime {
          type uint32;
          description
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 67]
-
-Internet-Draft                    L2NM                        April 2020
-
-
            "CCM hold time";
        }
        leaf alarm-priority-defect {
@@ -3774,6 +3018,13 @@ Internet-Draft                    L2NM                        April 2020
        description
          "Grouping for 802.1ag CFM attribute";
      }
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 54]
+
+Internet-Draft                    L2NM                          May 2020
+
 
      grouping y-1731 {
        list y-1731 {
@@ -3802,14 +3053,6 @@ Internet-Draft                    L2NM                        April 2020
          }
          leaf message-period {
            type uint32;
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 68]
-
-Internet-Draft                    L2NM                        April 2020
-
-
            description
              "Defines the interval between OAM messages. The message
               period is expressed in milliseconds";
@@ -3831,6 +3074,14 @@ Internet-Draft                    L2NM                        April 2020
              "Whether enable loss measurement";
          }
          leaf synthethic-loss-measurement {
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 55]
+
+Internet-Draft                    L2NM                          May 2020
+
+
            type boolean;
            description
              "Indicate whether enable synthetic loss measurement";
@@ -3858,14 +3109,6 @@ Internet-Draft                    L2NM                        April 2020
          leaf session-type {
            type enumeration {
              enum proactive {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 69]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                description
                  "Proactive mode";
              }
@@ -3887,6 +3130,14 @@ Internet-Draft                    L2NM                        April 2020
      grouping enni-site-info-grouping {
        container site-info {
          leaf site-name {
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 56]
+
+Internet-Draft                    L2NM                          May 2020
+
+
            type string;
            description
              "Site name";
@@ -3907,40 +3158,6 @@ Internet-Draft                    L2NM                        April 2020
        description
          "Grouping for site information";
      }
-
-     /*grouping site-security {
-     container security {
-     uses mac-loop-prevention-grouping;
-     container access-control-list {
-     list mac {
-      key "mac-address";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 70]
-
-Internet-Draft                    L2NM                        April 2020
-
-
-      leaf mac-address {
-        type yang:mac-address;
-        description
-        "MAC address";
-      }
-      description
-        "List for MAC";
-     }
-     description
-      "Container for access control";
-     }
-     uses mac-addr-limit-grouping;
-     uses cvlan-svc-map-grouping;
-     description
-     "Security parameters";
-     }
-     description
-     "This grouping defines security parameters for a site";
-     }*/
 
      grouping acl-grouping {
        container access-control-list {
@@ -3969,15 +3186,15 @@ Internet-Draft                    L2NM                        April 2020
              "LACP on/off";
          }
          leaf lacp-mode {
-           type boolean;
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 71]
+Barguil, et al.         Expires November 27, 2020              [Page 57]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
+           type boolean;
            description
              "LACP mode";
          }
@@ -4025,15 +3242,15 @@ Internet-Draft                    L2NM                        April 2020
                "BFD hold timer";
            }
            description
-             "Container of Micro-BFD configurations";
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 72]
+Barguil, et al.         Expires November 27, 2020              [Page 58]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
+             "Container of Micro-BFD configurations";
          }
          container bfd {
            if-feature "bfd";
@@ -4081,15 +3298,15 @@ Internet-Draft                    L2NM                        April 2020
              }
              leaf mode {
                type neg-mode;
-               description
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 73]
+Barguil, et al.         Expires November 27, 2020              [Page 59]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
+               description
                  "Negotiation mode";
              }
              leaf link-mtu {
@@ -4137,15 +3354,15 @@ Internet-Draft                    L2NM                        April 2020
            description
              "Port number";
          }
-         leaf port-speed {
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 74]
+Barguil, et al.         Expires November 27, 2020              [Page 60]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
+         leaf port-speed {
            type uint32;
            description
              "Port speed";
@@ -4193,15 +3410,15 @@ Internet-Draft                    L2NM                        April 2020
          leaf uni-loop-prevention {
            type boolean;
            description
-             "If this leaf set to truth that the port automatically
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 75]
+Barguil, et al.         Expires November 27, 2020              [Page 61]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
+             "If this leaf set to truth that the port automatically
               goes down when a physical loopback is detect.";
          }
          description
@@ -4249,15 +3466,15 @@ Internet-Draft                    L2NM                        April 2020
              description
                "Physical Interface";
            }
-           leaf c-vlan-id {
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 76]
+Barguil, et al.         Expires November 27, 2020              [Page 62]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
+           leaf c-vlan-id {
              type uint32;
              description
                "VLAN identifier";
@@ -4305,15 +3522,15 @@ Internet-Draft                    L2NM                        April 2020
                "S-Vlan ID";
            }
            description
-             "Container for Q in Any";
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 77]
+Barguil, et al.         Expires November 27, 2020              [Page 63]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
+             "Container for Q in Any";
          }
          container atm {
            when "'../l2-access-type'='atm'";
@@ -4361,21 +3578,30 @@ Internet-Draft                    L2NM                        April 2020
          }
          description
            "Container for dot1Q Interface";
-       }
 
 
 
-Barguil, et al.         Expires November 1, 2020               [Page 78]
+Barguil, et al.         Expires November 27, 2020              [Page 64]
 
-Internet-Draft                    L2NM                        April 2020
+Internet-Draft                    L2NM                          May 2020
 
 
+       }
        description
          "Grouping for Layer2 access";
      }
 
      grouping ethernet-connection-grouping {
        container connection {
+         leaf port-id {
+             type string;
+             description
+               "Reference to the Port-id.
+                The semantic of the Port-Id depends on the vendor's
+                semantic. i.e ge-X/Y/Z , xe-X/Y/Z , et-X/Y/Z,AeXXX.YYY,
+                aeXXX,GigabitEthernetX/Y/Z";
+           }
+
          leaf encapsulation-type {
            type identityref {
              base encapsulation-type;
@@ -4408,6 +3634,14 @@ Internet-Draft                    L2NM                        April 2020
          type uint32;
          description
            "SVC MTU, it is also known as the maximum transmission unit
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 65]
+
+Internet-Draft                    L2NM                          May 2020
+
+
             or maximum frame size,When a frame is larger than the MTU,
             it is broken down, or fragmented, into smaller pieces by the
             network protocol to accommodate the MTU of the network";
@@ -4418,14 +3652,6 @@ Internet-Draft                    L2NM                        April 2020
 
      grouping svc-preservation-grouping {
        leaf ce-vlan-preservation {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 79]
-
-Internet-Draft                    L2NM                        April 2020
-
-
          type boolean;
          description
            "Preserve the CE-VLAN ID from ingress to egress,i.e.,
@@ -4464,6 +3690,14 @@ Internet-Draft                    L2NM                        April 2020
          }
          leaf action {
            type identityref {
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 66]
+
+Internet-Draft                    L2NM                          May 2020
+
+
              base mac-action;
            }
            description
@@ -4474,14 +3708,6 @@ Internet-Draft                    L2NM                        April 2020
          description
            "Container of MAC-Addr limit configurations";
        }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 80]
-
-Internet-Draft                    L2NM                        April 2020
-
-
        description
          "Grouping for mac address limit";
      }
@@ -4520,6 +3746,14 @@ Internet-Draft                    L2NM                        April 2020
        }
        description
          "Grouping for availability";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 67]
+
+Internet-Draft                    L2NM                          May 2020
+
+
      }
 
      grouping l2cp-grouping {
@@ -4530,14 +3764,6 @@ Internet-Draft                    L2NM                        April 2020
            description
              "STP/RSTP/MSTP protocol type applicable to all UNIs";
          }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 81]
-
-Internet-Draft                    L2NM                        April 2020
-
-
          leaf pause {
            type control-mode;
            description
@@ -4576,6 +3802,14 @@ Internet-Draft                    L2NM                        April 2020
          leaf ptp-peer-delay {
            type control-mode;
            description
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 68]
+
+Internet-Draft                    L2NM                          May 2020
+
+
              "PTP peer delay";
          }
          leaf garp-mrp {
@@ -4586,14 +3820,6 @@ Internet-Draft                    L2NM                        April 2020
          description
            "Container of L2CP control configurations";
        }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 82]
-
-Internet-Draft                    L2NM                        April 2020
-
-
        description
          "Grouping for l2cp control";
      }
@@ -4632,6 +3858,14 @@ Internet-Draft                    L2NM                        April 2020
                "the VLAN ID of the Multicast group";
            }
            leaf mac-gp-address {
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 69]
+
+Internet-Draft                    L2NM                          May 2020
+
+
              type yang:mac-address;
              description
                "the MAC address of the Multicast group";
@@ -4642,14 +3876,6 @@ Internet-Draft                    L2NM                        April 2020
                "the ports/LAGs belonging to the Multicast group";
            }
            description
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 83]
-
-Internet-Draft                    L2NM                        April 2020
-
-
              "List of Port to group mappings.";
          }
          leaf bum-overall-rate {
@@ -4688,6 +3914,14 @@ Internet-Draft                    L2NM                        April 2020
            type uint32;
            description
              "Frequency";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 70]
+
+Internet-Draft                    L2NM                          May 2020
+
+
          }
          leaf protection-type {
            type identityref {
@@ -4698,14 +3932,6 @@ Internet-Draft                    L2NM                        April 2020
          }
          leaf number-retries {
            type uint32;
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 84]
-
-Internet-Draft                    L2NM                        April 2020
-
-
            description
              "Number of retries";
          }
@@ -4744,6 +3970,14 @@ Internet-Draft                    L2NM                        April 2020
            description
              "Container of 802.1ag CFM configurations.";
          }
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 71]
+
+Internet-Draft                    L2NM                          May 2020
+
+
          uses y-1731;
          description
            "Container for Ethernet service OAM.";
@@ -4754,14 +3988,6 @@ Internet-Draft                    L2NM                        April 2020
 
      grouping fate-sharing-group {
        container groups {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 85]
-
-Internet-Draft                    L2NM                        April 2020
-
-
          leaf fate-sharing-group-size {
            type uint16;
            description
@@ -4800,6 +4026,14 @@ Internet-Draft                    L2NM                        April 2020
              description
                "Group-id the site is belonging to";
            }
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 72]
+
+Internet-Draft                    L2NM                          May 2020
+
+
            description
              "List of group-id";
          }
@@ -4810,14 +4044,6 @@ Internet-Draft                    L2NM                        April 2020
        description
          "Grouping definition to assign
           group-ids to site or vpn-network-access";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 86]
-
-Internet-Draft                    L2NM                        April 2020
-
-
      }
 
      grouping access-diversity {
@@ -4856,6 +4082,14 @@ Internet-Draft                    L2NM                        April 2020
                      description
                        "The constraint will apply
                         against all other site network
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 73]
+
+Internet-Draft                    L2NM                          May 2020
+
+
                         access of this site";
                    }
                  }
@@ -4866,14 +4100,6 @@ Internet-Draft                    L2NM                        April 2020
                        "The constraint will apply
                         against all other groups the
                         customer is managing";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 87]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                    }
                  }
                  description
@@ -4912,6 +4138,14 @@ Internet-Draft                    L2NM                        April 2020
                  type uint16;
                  description
                    "VLAN ID";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 74]
+
+Internet-Draft                    L2NM                          May 2020
+
+
                }
                description
                  "Container for dot1q.";
@@ -4922,14 +4156,6 @@ Internet-Draft                    L2NM                        April 2020
            case physical-case {
              leaf physical-if {
                type string;
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 88]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                description
                  "Physical interface";
              }
@@ -4968,6 +4194,14 @@ Internet-Draft                    L2NM                        April 2020
              description
                "Define if the requested-type is a preference
                 or a strict requirement.";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 75]
+
+Internet-Draft                    L2NM                          May 2020
+
+
            }
            description
              "Container for requested type.";
@@ -4978,14 +4212,6 @@ Internet-Draft                    L2NM                        April 2020
            default "true";
            description
              "Request for an always on access type.
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 89]
-
-Internet-Draft                    L2NM                        April 2020
-
-
               This means no Dial access type for
               example.";
          }
@@ -5024,6 +4250,14 @@ Internet-Draft                    L2NM                        April 2020
              type inet:ip-address;
              description
                "Management address";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 76]
+
+Internet-Draft                    L2NM                          May 2020
+
+
            }
            description
              "Management configuration..";
@@ -5034,14 +4268,6 @@ Internet-Draft                    L2NM                        April 2020
                key "vpn-id";
                leaf vpn-id {
                  type leafref {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 90]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                    path "/l2vpn-ntw/vpn-services"
                       + "/vpn-service/vpn-id";
                  }
@@ -5081,6 +4307,13 @@ Internet-Draft                    L2NM                        April 2020
          "Grouping for access attachment";
      }
 
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 77]
+
+Internet-Draft                    L2NM                          May 2020
+
+
      grouping site-service-basic {
        container svc-input-bandwidth {
          if-feature "input-bw";
@@ -5090,14 +4323,6 @@ Internet-Draft                    L2NM                        April 2020
              type identityref {
                base bw-type;
              }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 91]
-
-Internet-Draft                    L2NM                        April 2020
-
-
              description
                "Bandwidth Type";
            }
@@ -5137,6 +4362,14 @@ Internet-Draft                    L2NM                        April 2020
            }
            leaf ebs {
              type uint64;
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 78]
+
+Internet-Draft                    L2NM                          May 2020
+
+
              description
                "Excess Burst Size. The bandwidth available for burst
                 traffic from the EBS is subject to the amount of
@@ -5146,14 +4379,6 @@ Internet-Draft                    L2NM                        April 2020
            leaf pir {
              type uint64;
              description
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 92]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                "Peak Information Rate, i.e., maixmum frame delivery
                 allowed. It is equal to or less than sum of cir and
                 eir.";
@@ -5193,6 +4418,14 @@ Internet-Draft                    L2NM                        April 2020
              description
                "Identifies the target VPN.";
            }
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 79]
+
+Internet-Draft                    L2NM                          May 2020
+
+
            leaf cir {
              type uint64;
              description
@@ -5202,14 +4435,6 @@ Internet-Draft                    L2NM                        April 2020
            }
            leaf cbs {
              type uint64;
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 93]
-
-Internet-Draft                    L2NM                        April 2020
-
-
              description
                "Committed Burst Size.CBS controls the bursty nature
                 of the traffic. Traffic that does not use the
@@ -5249,6 +4474,14 @@ Internet-Draft                    L2NM                        April 2020
          description
            "From the PE perspective, the service output
             bandwidth of the connection.";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 80]
+
+Internet-Draft                    L2NM                          May 2020
+
+
        }
        description
          "Grouping for site service";
@@ -5258,14 +4491,6 @@ Internet-Draft                    L2NM                        April 2020
        container match-flow {
          leaf dscp {
            type inet:dscp;
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 94]
-
-Internet-Draft                    L2NM                        April 2020
-
-
            description
              "DSCP value.";
          }
@@ -5305,6 +4530,14 @@ Internet-Draft                    L2NM                        April 2020
              "Identify a site as traffic destination.";
          }
          leaf any {
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 81]
+
+Internet-Draft                    L2NM                          May 2020
+
+
            type empty;
            description
              "Allow all.";
@@ -5314,14 +4547,6 @@ Internet-Draft                    L2NM                        April 2020
            description
              "Reference to the target VPN.";
          }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 95]
-
-Internet-Draft                    L2NM                        April 2020
-
-
          description
            "Describe flow matching criteria.";
        }
@@ -5343,6 +4568,7 @@ Internet-Draft                    L2NM                        April 2020
        container service {
          uses site-service-basic;
          uses site-service-qos-profile;
+         uses svc-precedence;
          description
            "Container for service";
        }
@@ -5360,6 +4586,14 @@ Internet-Draft                    L2NM                        April 2020
              leaf id {
                type string;
                description
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 82]
+
+Internet-Draft                    L2NM                          May 2020
+
+
                  "A description identifying qos classification
                   policy rule.";
              }
@@ -5370,14 +4604,6 @@ Internet-Draft                    L2NM                        April 2020
                    leaf dscp {
                      type inet:dscp;
                      description
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 96]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                        "DSCP value.";
                    }
                    leaf dot1q {
@@ -5416,6 +4642,14 @@ Internet-Draft                    L2NM                        April 2020
                      type svc-id;
                      description
                        "Reference to the target VPN.";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 83]
+
+Internet-Draft                    L2NM                          May 2020
+
+
                    }
                    description
                      "Describe flow matching criteria.";
@@ -5426,14 +4660,6 @@ Internet-Draft                    L2NM                        April 2020
                    type identityref {
                      base customer-application;
                    }
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 97]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                    description
                      "Defines the application to match.";
                  }
@@ -5472,6 +4698,14 @@ Internet-Draft                    L2NM                        April 2020
        }
        description
          "This grouping defines QoS parameters
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 84]
+
+Internet-Draft                    L2NM                          May 2020
+
+
           for a site";
      }
 
@@ -5482,14 +4716,6 @@ Internet-Draft                    L2NM                        April 2020
          container valid-provider-identifiers {
            leaf-list cloud-identifier {
              if-feature "cloud-access";
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 98]
-
-Internet-Draft                    L2NM                        April 2020
-
-
              type string;
              description
                "Identification of public cloud service
@@ -5528,6 +4754,14 @@ Internet-Draft                    L2NM                        April 2020
            key "vpn-id";
            leaf vpn-id {
              type svc-id;
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 85]
+
+Internet-Draft                    L2NM                          May 2020
+
+
              description
                "Refers to unique identifier for the L2NM.";
            }
@@ -5538,14 +4772,6 @@ Internet-Draft                    L2NM                        April 2020
            }
            leaf vpn-svc-type {
              type identityref {
-
-
-
-Barguil, et al.         Expires November 1, 2020               [Page 99]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                base service-type;
              }
              description
@@ -5584,6 +4810,14 @@ Internet-Draft                    L2NM                        April 2020
              "LLDP protocol type applicable to all UNIs ";
            }
            description
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 86]
+
+Internet-Draft                    L2NM                          May 2020
+
+
            "Container of L2CP control global configurations";
            }*/
            uses site-service;
@@ -5591,17 +4825,9 @@ Internet-Draft                    L2NM                        April 2020
            uses vpn-extranet;
            uses svc-mtu-grouping;
            uses svc-preservation-grouping;
-           uses svc-transport-encapsulation;
+           uses l3vpn-ntw:svc-transport-encapsulation;
            container vpn-nodes {
              list vpn-node {
-
-
-
-Barguil, et al.         Expires November 1, 2020              [Page 100]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                key "vpn-node-id ne-id";
                leaf vpn-node-id {
                  type string;
@@ -5626,7 +4852,12 @@ Internet-Draft                    L2NM                        April 2020
                  description
                    "NE IP address";
                }
-               uses vpn-route-targets;
+               leaf port-id {
+                 type string;
+                 description
+                   "NE Port-id";
+               }
+               uses signaling-options-grouping;
                container vpn-network-accesses {
                  list vpn-network-access {
                    key "network-access-id";
@@ -5635,6 +4866,14 @@ Internet-Draft                    L2NM                        April 2020
                      description
                        "Identifier of network access";
                    }
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 87]
+
+Internet-Draft                    L2NM                          May 2020
+
+
                    leaf description {
                      type string;
                      description
@@ -5650,14 +4889,6 @@ Internet-Draft                    L2NM                        April 2020
                        "Remote carrier name";
                    }
                    leaf Interface-mtu {
-
-
-
-Barguil, et al.         Expires November 1, 2020              [Page 101]
-
-Internet-Draft                    L2NM                        April 2020
-
-
                      type uint32;
                      description
                        "Interface MTU, it is also known as the maximum
@@ -5672,13 +4903,11 @@ Internet-Draft                    L2NM                        April 2020
                    uses ethernet-connection-grouping;
                    uses availability-grouping;
                    uses service-grouping;
-                   uses svc-precedence;
                    uses B-U-M-grouping;
                    uses ethernet-svc-oam-grouping;
                    uses mac-loop-prevention-grouping;
                    uses acl-grouping;
                    uses mac-addr-limit-grouping;
-                   uses site-bearer-params;
                    description
                      "List of VPN Network Accesses.";
                  }
@@ -5693,6 +4922,14 @@ Internet-Draft                    L2NM                        April 2020
            }
            description
              "Container of port configurations";
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 88]
+
+Internet-Draft                    L2NM                          May 2020
+
+
          }
          description
            "Container for L2VPN service";
@@ -5704,15 +4941,6 @@ Internet-Draft                    L2NM                        April 2020
    <CODE ENDS>
 
                                  Figure 6
-
-
-
-
-
-Barguil, et al.         Expires November 1, 2020              [Page 102]
-
-Internet-Draft                    L2NM                        April 2020
-
 
 6.  Acknowledgements
 
@@ -5748,6 +4976,16 @@ Internet-Draft                    L2NM                        April 2020
 
       XML: N/A; the requested URI is an XML namespace.
 
+
+
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 89]
+
+Internet-Draft                    L2NM                          May 2020
+
+
    This document requests IANA to register the following YANG module in
    the "YANG Module Names" subregistry [RFC6020] within the "YANG
    Parameters" registry.
@@ -5761,14 +4999,6 @@ Internet-Draft                    L2NM                        April 2020
       prefix: l2vpn-ntw
 
       reference: RFC XXXX
-
-
-
-
-Barguil, et al.         Expires November 1, 2020              [Page 103]
-
-Internet-Draft                    L2NM                        April 2020
-
 
 9.  Security Considerations
 
@@ -5804,6 +5034,14 @@ Internet-Draft                    L2NM                        April 2020
    Some of the readable data nodes in this YANG module may be considered
    sensitive or vulnerable in some network environments.  It is thus
    important to control read access (e.g., via get, get-config, or
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 90]
+
+Internet-Draft                    L2NM                          May 2020
+
+
    notification) to these data nodes.  These are the subtrees and data
    nodes and their sensitivity/vulnerability:
 
@@ -5813,18 +5051,6 @@ Internet-Draft                    L2NM                        April 2020
       provider trust relationship.
 
 10.  References
-
-
-
-
-
-
-
-
-Barguil, et al.         Expires November 1, 2020              [Page 104]
-
-Internet-Draft                    L2NM                        April 2020
-
 
 10.1.  Normative References
 
@@ -5837,17 +5063,6 @@ Internet-Draft                    L2NM                        April 2020
               DOI 10.17487/RFC3688, January 2004,
               <https://www.rfc-editor.org/info/rfc3688>.
 
-   [RFC6242]  Wasserman, M., "Using the NETCONF Protocol over Secure
-              Shell (SSH)", RFC 6242, DOI 10.17487/RFC6242, June 2011,
-              <https://www.rfc-editor.org/info/rfc6242>.
-
-   [RFC8341]  Bierman, A. and M. Bjorklund, "Network Configuration
-              Access Control Model", STD 91, RFC 8341,
-              DOI 10.17487/RFC8341, March 2018,
-              <https://www.rfc-editor.org/info/rfc8341>.
-
-10.2.  Informative References
-
    [RFC6020]  Bjorklund, M., Ed., "YANG - A Data Modeling Language for
               the Network Configuration Protocol (NETCONF)", RFC 6020,
               DOI 10.17487/RFC6020, October 2010,
@@ -5857,6 +5072,10 @@ Internet-Draft                    L2NM                        April 2020
               and A. Bierman, Ed., "Network Configuration Protocol
               (NETCONF)", RFC 6241, DOI 10.17487/RFC6241, June 2011,
               <https://www.rfc-editor.org/info/rfc6241>.
+
+   [RFC6242]  Wasserman, M., "Using the NETCONF Protocol over Secure
+              Shell (SSH)", RFC 6242, DOI 10.17487/RFC6242, June 2011,
+              <https://www.rfc-editor.org/info/rfc6242>.
 
    [RFC7432]  Sajassi, A., Ed., Aggarwal, R., Bitar, N., Isaac, A.,
               Uttaro, J., Drake, J., and W. Henderickx, "BGP MPLS-Based
@@ -5871,21 +5090,34 @@ Internet-Draft                    L2NM                        April 2020
               Protocol", RFC 8040, DOI 10.17487/RFC8040, January 2017,
               <https://www.rfc-editor.org/info/rfc8040>.
 
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 91]
+
+Internet-Draft                    L2NM                          May 2020
+
+
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
-
-
-
-Barguil, et al.         Expires November 1, 2020              [Page 105]
-
-Internet-Draft                    L2NM                        April 2020
-
 
    [RFC8214]  Boutros, S., Sajassi, A., Salam, S., Drake, J., and J.
               Rabadan, "Virtual Private Wire Service Support in Ethernet
               VPN", RFC 8214, DOI 10.17487/RFC8214, August 2017,
               <https://www.rfc-editor.org/info/rfc8214>.
+
+   [RFC8341]  Bierman, A. and M. Bjorklund, "Network Configuration
+              Access Control Model", STD 91, RFC 8341,
+              DOI 10.17487/RFC8341, March 2018,
+              <https://www.rfc-editor.org/info/rfc8341>.
+
+   [RFC8466]  Wen, B., Fioccola, G., Ed., Xie, C., and L. Jalil, "A YANG
+              Data Model for Layer 2 Virtual Private Network (L2VPN)
+              Service Delivery", RFC 8466, DOI 10.17487/RFC8466, October
+              2018, <https://www.rfc-editor.org/info/rfc8466>.
+
+10.2.  Informative References
 
    [RFC8309]  Wu, Q., Liu, W., and A. Farrel, "Service Models
               Explained", RFC 8309, DOI 10.17487/RFC8309, January 2018,
@@ -5900,11 +5132,6 @@ Internet-Draft                    L2NM                        April 2020
               DOI 10.17487/RFC8453, August 2018,
               <https://www.rfc-editor.org/info/rfc8453>.
 
-   [RFC8466]  Wen, B., Fioccola, G., Ed., Xie, C., and L. Jalil, "A YANG
-              Data Model for Layer 2 Virtual Private Network (L2VPN)
-              Service Delivery", RFC 8466, DOI 10.17487/RFC8466, October
-              2018, <https://www.rfc-editor.org/info/rfc8466>.
-
 Authors' Addresses
 
    Samier Barguil (editor)
@@ -5913,6 +5140,18 @@ Authors' Addresses
    ES
 
    Email: samier.barguilgiraldo.ext@telefonica.com
+
+
+
+
+
+
+
+
+
+Barguil, et al.         Expires November 27, 2020              [Page 92]
+
+Internet-Draft                    L2NM                          May 2020
 
 
    Oscar Gonzalez de Dios (editor)
@@ -5928,14 +5167,6 @@ Authors' Addresses
    France
 
    Email: "mohamed.boucadair@orange.com
-
-
-
-
-
-Barguil, et al.         Expires November 1, 2020              [Page 106]
-
-Internet-Draft                    L2NM                        April 2020
 
 
    Luis Angel Munoz
@@ -5974,19 +5205,4 @@ Internet-Draft                    L2NM                        April 2020
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Barguil, et al.         Expires November 1, 2020              [Page 107]
+Barguil, et al.         Expires November 27, 2020              [Page 93]

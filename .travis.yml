@@ -36,5 +36,6 @@ script:
   - cd Yang
   - pyang -f tree --ietf ietf-l2vpn-ntw.yang
   - yanglint -f yang ietf-l2vpn-ntw.yang
+  - yanglint --verbose ietf-l2vpn-ntw.yang -i
 
  

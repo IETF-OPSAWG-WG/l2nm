@@ -78,7 +78,7 @@ module ietf-l2vpn-ntw {
      (https://www.rfc-editor.org/info/rfcXXXX); see the RFC itself
      for full legal notices.";
 
-  revision 2020-04-24 {
+  revision 2020-05-26 {
     description
       "Third revision -02 version";
     reference

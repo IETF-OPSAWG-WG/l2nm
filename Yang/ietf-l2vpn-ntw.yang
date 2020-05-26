@@ -602,6 +602,12 @@ module ietf-l2vpn-ntw {
       "Identity of t-ldp.";
   }
 
+  identity h-vpls {
+    base vpn-signaling-type;
+    description
+      "Identity for h-vpls";
+  }
+
   identity l2tp {
     base vpn-signaling-type;
     description

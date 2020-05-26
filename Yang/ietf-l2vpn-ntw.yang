@@ -921,21 +921,6 @@ module ietf-l2vpn-ntw {
     }
   }
 
-  grouping svc-transport-encapsulation {
-    container transport-encapsulation {
-      leaf-list protocol {
-        type protocol-type;
-        ordered-by user;
-        description
-          "Protocols used to support transport";
-      }
-      description
-        "Container for the Transport Underlay.";
-    }
-    description
-      "This grouping defines the type of underlay transport
-    for VPN service.";
-  }
 
   grouping split-horizon-group {
     container split-horizon {

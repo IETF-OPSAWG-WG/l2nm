@@ -631,7 +631,7 @@ module ietf-l2vpn-ntw {
       "Identity for vpls";
   }
 
-  identity h-vpls {
+  identity hvpls {
     base t-ldp-pwe-type;
     description
       "Identity for h-vpls";

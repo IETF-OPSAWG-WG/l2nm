@@ -1022,6 +1022,8 @@ identity placement-diversity {
                   description
                     "Type of trees used by customer.";
                 }
+                description
+                "Multicast like container";
                 }
         
             container extranet-vpns {

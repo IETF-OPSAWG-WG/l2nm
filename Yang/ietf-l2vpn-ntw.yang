@@ -1461,7 +1461,7 @@ identity placement-diversity {
                                 "L2 Access Encapsulation Type";
                             }
                             container dot1q {
-                              when "'../l2-access-type'='vpn-common:dot1q'";
+                              when "../l2-access-type='vpn-common:dot1q'";
                               if-feature "dot1q";
                               leaf physical-inf {
                                 type string;
@@ -1477,7 +1477,7 @@ identity placement-diversity {
                                 "Qot1q";
                             }
                             container qinq {
-                              when "'../l2-access-type'='vpn-common:qinq'";
+                              when "../l2-access-type='vpn-common:qinq'";
                               if-feature "qinq";
                               leaf s-vlan-id {
                                 type uint32;
@@ -1503,7 +1503,7 @@ identity placement-diversity {
                                 "Container for Q in Any";
                             }
                             container vxlan {
-                              when "'../l2-access-type'='vpn-common:vxlan'";
+                              when "../l2-access-type='vpn-common:vxlan'";
                               if-feature "vxlan";
                               leaf vni-id {
                                 type uint32;

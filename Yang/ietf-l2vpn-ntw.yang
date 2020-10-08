@@ -1257,6 +1257,28 @@ identity placement-diversity {
                           description
                           "broadcast-unknown-unicast-multicast management";
                         }
+                        container ethernet-segments {
+                          list ethernet-segment {
+                            key name;
+                            leaf name {
+                              type string;
+                              description
+                            "Ethenet segment name on the EVPN";
+                            }
+                            leaf ethernet-segment-identifier {
+                              type yang:hex-string {
+                              length "29";
+                            }
+                            description 
+                            "10-octet Ethernet segment identifier (esi),
+                            ex: 00:5a:5a:5a:5a:5a:5a:5a:5a:5a";
+                            }
+                            description
+                          "Ethenet segment support on the EVPN";
+                          }
+                          description
+                          "Ethenet segment support on the EVPN";
+                        }
                     }
                     description
                       "Container for MPBGP-L2VPN";

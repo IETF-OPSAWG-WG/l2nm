@@ -898,11 +898,8 @@ module ietf-l2vpn-ntw {
     container vpn-services {
       list vpn-service {
         key "vpn-id";
-        leaf vpn-id {
-          type vpn-common:svc-id;
-          description
-            "Refers to unique identifier for the L2NM.";
-        }
+        uses vpn-common:service-status;
+        uses vpn-common:vpn-description;
         leaf l2sm-vpn-id {
           type vpn-common:svc-id;
           description
@@ -915,20 +912,14 @@ module ietf-l2vpn-ntw {
           description
             "Service type";
         }
-        leaf customer-name {
-          type string;
-          description
-            "Customer name";
-        }
         leaf svc-topo {
           type identityref {
             base vpn-common:vpn-topology;
           }
           description
             "Defining service topology, such as
-             any-to-any,hub-spoke, etc.";
+             any-to-any, hub-spoke, etc.";
         }
-        uses vpn-common:service-status;
         
             container multicast-like {
                 if-feature "vpn-common:multicast";

@@ -674,31 +674,6 @@ identity placement-diversity {
 
   /* Groupings */
 
-  grouping ports {
-    choice source-port {
-      container source-port-range-or-operator {
-        uses packet-fields:port-range-or-operator;
-        description
-          "Source port definition.";
-      }
-      description
-        "Choice of specifying the source port or referring to
-         a group of source port numbers.";
-    }
-    choice destination-port {
-      container destination-port-range-or-operator {
-        uses packet-fields:port-range-or-operator;
-        description
-          "Destination port definition.";
-      }
-      description
-        "Choice of specifying a destination port or referring
-         to a group of destination port numbers.";
-    }
-    description
-      "Choice of specifying a source or destination port numbers.";
-  }
-
   grouping cfm-802-grouping {
     leaf maid {
       type string;
@@ -886,13 +861,13 @@ identity placement-diversity {
             choice l4 {
               container tcp {
                 uses packet-fields:acl-tcp-header-fields;
-                uses ports;
+                uses vpn-common:ports;
                 description
                   "Rule set that matches TCP header.";
               }
               container udp {
                 uses packet-fields:acl-udp-header-fields;
-                uses ports;
+                uses vpn-common:ports;
                 description
                   "Rule set that matches UDP header.";
               }

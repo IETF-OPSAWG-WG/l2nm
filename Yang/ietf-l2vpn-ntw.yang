@@ -109,11 +109,6 @@ module ietf-l2vpn-ntw {
       "Indicates the support of Micro-BFD.";
   }
 
-  feature bfd {
-    description
-      "Indicates the support of BFD.";
-  }
-
   feature signaling-options {
     description
       "Indicates the support of signalling option.";

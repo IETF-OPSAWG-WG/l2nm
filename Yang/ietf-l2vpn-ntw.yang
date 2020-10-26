@@ -77,11 +77,6 @@ module ietf-l2vpn-ntw {
        in a L2VPN.";
   }
 
-  feature extranet-vpn {
-    description
-      "Indicates the Support of Extranet VPN.";
-  }
-
   feature target-sites {
     description
       "Indicates the support of 'target-sites' match flow

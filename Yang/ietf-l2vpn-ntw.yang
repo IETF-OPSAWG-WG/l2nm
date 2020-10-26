@@ -136,12 +136,6 @@ module ietf-l2vpn-ntw {
       "Indicates the support of signalling option.";
   }
 
-  feature site-diversity {
-    description
-      "Indicates the support of site diversity constraints in
-       a VPN.";
-  }
-
   feature encryption {
     description
       "Indicates the support of encryption.";
@@ -542,48 +536,6 @@ module ietf-l2vpn-ntw {
     base pm-type;
     description
       "Delay measurement.";
-  }
-
-identity placement-diversity {
-    description
-      "Base identity for site placement constraints.";
-  }
-
-  identity bearer-diverse {
-    base placement-diversity;
-    description
-      "Identity for bearer diversity.
-       The bearers should not use common elements.";
-  }
-
-  identity pe-diverse {
-    base placement-diversity;
-    description
-      "Identity for PE diversity.";
-  }
-
-  identity pop-diverse {
-    base placement-diversity;
-    description
-      "Identity for POP diversity.";
-  }
-
-  identity linecard-diverse {
-    base placement-diversity;
-    description
-      "Identity for linecard diversity.";
-  }
-
-  identity same-pe {
-    base placement-diversity;
-    description
-      "Identity for having sites connected on the same PE.";
-  }
-
-  identity same-bearer {
-    base placement-diversity;
-    description
-      "Identity for having sites connected using the same bearer.";
   }
 
   identity mac-learning-mode {
@@ -1319,7 +1271,7 @@ identity placement-diversity {
                 uses vpn-common:service-status;
 
                 container access-diversity {
-                  if-feature "vpn-common:site-diversity";
+                  if-feature "vpn-common:placement-diversity";
                   
                       container groups {
                         leaf fate-sharing-group-size {
@@ -1353,7 +1305,7 @@ identity placement-diversity {
                       key "constraint-type";
                       leaf constraint-type {
                         type identityref {
-                          base placement-diversity;
+                          base vpn-common:placement-diversity;
                         }
                         description
                           "Diversity constraint type.";

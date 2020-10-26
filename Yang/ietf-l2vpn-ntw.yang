@@ -99,12 +99,6 @@ module ietf-l2vpn-ntw {
       "Indicates thesupport of UNI list in a VPN.";
   }
 
-  feature cloud-access {
-    description
-      "Indicates the support of a VPN to connect to a Cloud Service
-       provider.";
-  }
-
   feature oam-3ah {
     description
       "Indicates the support of OAM 802.3ah.";

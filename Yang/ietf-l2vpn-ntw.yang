@@ -114,11 +114,6 @@ module ietf-l2vpn-ntw {
       "Indicates the support of signalling option.";
   }
 
-  feature encryption {
-    description
-      "Indicates the support of encryption.";
-  }
-
   feature always-on {
     description
       "Indicates the support for always-on access

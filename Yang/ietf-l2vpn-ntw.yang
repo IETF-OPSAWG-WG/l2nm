@@ -126,40 +126,14 @@ module ietf-l2vpn-ntw {
        constraint.";
   }
 
-  feature bearer-reference {
-    description
-      "Indicates the support for bearer-reference access
-       constraint.";
-  }
-
-  feature lag-interface {
-    description
-      "Enable lag-interface.";
-  }
-
   feature vlan {
     description
       "Indicates the support of VLAN.";
   }
 
-  feature dot1q {
-    description
-      "Indicates the support of Dot1Q.";
-  }
-
   feature sub-inf {
     description
       "Indicates the support of Sub Interface.";
-  }
-
-  feature qinq {
-    description
-      "Indicates the support of QinQ.";
-  }
-
-  feature qinany {
-    description
-      "Indicates the support of QinAny.";
   }
 
   feature atm {
@@ -172,15 +146,6 @@ module ietf-l2vpn-ntw {
       "Indicates the support of VxLAN.";
   }
 
-  feature ipv4 {
-    description
-      "Indicates the support in a VPN.";
-  }
-
-  feature ipv6 {
-    description
-      "Indicates the support in a VPN.";
-  }
 
   feature lan-tag {
     description
@@ -188,86 +153,6 @@ module ietf-l2vpn-ntw {
   }
 
   /* Typedefs */
-
-  
-  typedef operational-type {
-    type enumeration {
-      enum up {
-        value 0;
-        description
-          "Operational status UP.";
-      }
-      enum down {
-        value 1;
-        description
-          "Operational status DOWN";
-      }
-      enum unknown {
-        value 2;
-        description
-          "Operational status UNKNOWN";
-      }
-    }
-    description
-      "This is an attribute used to determine the
-       operational status of a particular element.";
-  }
-
-  typedef svc-id {
-    type string;
-    description
-      "Indicates the type of service component identifier.";
-  }
-
-  typedef ccm-priority-type {
-    type uint8 {
-      range "0..7";
-    }
-    description
-      "A 3 bit priority value to be used in the VLAN tag,
-       if present in the transmitted frame.";
-  }
-
-  typedef control-mode {
-    type enumeration {
-      enum peer {
-        description
-          "Peer mode, i.e., participate in the protocol towards
-           the CE. Peering is common for LACP  and E-LMI and
-           occasionally for LLDP. For virtual private services
-           the Subscriber can also request that the Service 
-           Provider peer spanning tree.";
-      }
-      enum tunnel {
-        description
-          "Tunnel mode,i.e.,pass to the egress or destination site.
-           For EPL, the expectation is that L2CP frames are
-           tunneled.";
-      }
-      enum discard {
-        description
-          "Discard mode,i.e.,discard the frame.";
-      }
-    }
-    description
-      "Defining a type of the control mode on L2CP protocols.";
-  }
-
-  typedef neg-mode {
-    type enumeration {
-      enum full-duplex {
-        description
-          "Defining Full duplex mode";
-      }
-      enum auto-neg {
-        description
-          "Defining Auto negotiation mode";
-      }
-    }
-    description
-      "Defining a type of the negotiation mode";
-  }
-
   /* Identities */
 
   identity mapping-type {
@@ -412,7 +297,6 @@ module ietf-l2vpn-ntw {
     description
       "Identity of two-rate, three-color (2R3C)";
   }
-
 
   identity loop-prevention-type {
     description
@@ -1369,7 +1253,7 @@ module ietf-l2vpn-ntw {
                             }
                             container qinq {
                               when "../l2-access-type='vpn-common:qinq'";
-                              if-feature "qinq";
+                              if-feature "vpn-common:qinq";
                               leaf s-vlan-id {
                                 type uint32;
                                 description

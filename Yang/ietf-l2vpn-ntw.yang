@@ -88,12 +88,6 @@ module ietf-l2vpn-ntw {
       "Indicates the support of L2CP control.";
   }
 
-  feature input-bw {
-    description
-      "Indicates the suppport of Input Bandwidth
-      in a VPN.";
-  }
-
   feature output-bw {
     description
       "Indicates the support of Output Bandwidth in
@@ -1665,7 +1659,7 @@ module ietf-l2vpn-ntw {
                     container service {
                       
                           container svc-input-bandwidth {
-                            if-feature "input-bw";
+                            if-feature "vpn-common:input-bw";
                             list input-bandwidth {
                               key "type";
                               leaf type {

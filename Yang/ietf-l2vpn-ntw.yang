@@ -29,19 +29,20 @@ module ietf-l2vpn-ntw {
     "IETF OPSA (Operations and Management Area) Working Group";
   contact
     "WG Web:   <http://tools.ietf.org/wg/opsawg/>
-        WG List:  <mailto:opsawg@ietf.org>
-        Editor:    Samier Barguil
-                  <mailto:samier.barguilgiraldo.ext@telefonica.com>
-        Editor:    Oscar Gonzalez de Dios
-                  <mailto:oscar.gonzalezdedios@telefonica.com>
-        Author:    Mohamed Boucadair
-                  <mailto:mohamed.boucadair@orange.com>
-        Author:    Luis Angel Munoz
-                  <mailto:luis-angel.munoz@vodafone.com>
-        Author:    Luay Jalil
-                  <mailto:luay.jalil@verizon.com>
-        Author:    Jichun Ma
-                  <mailto:majc16@chinaunicom.cn>
+     WG List:  <mailto:opsawg@ietf.org>
+     
+     Editor:    Samier Barguil
+               <mailto:samier.barguilgiraldo.ext@telefonica.com>
+     Editor:    Oscar Gonzalez de Dios
+               <mailto:oscar.gonzalezdedios@telefonica.com>
+     Author:    Mohamed Boucadair
+               <mailto:mohamed.boucadair@orange.com>
+     Author:    Luis Angel Munoz
+                <mailto:luis-angel.munoz@vodafone.com>
+     Author:    Luay Jalil
+                <mailto:luay.jalil@verizon.com>
+     Author:    Jichun Ma
+                <mailto:majc16@chinaunicom.cn>
     ";
   description
     "The YANG module defines a generic network configuration

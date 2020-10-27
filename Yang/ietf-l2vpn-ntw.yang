@@ -63,9 +63,9 @@ module ietf-l2vpn-ntw {
      (https://www.rfc-editor.org/info/rfcXXXX); see the RFC itself
      for full legal notices.";
 
-  revision 2020-05-26 {
+  revision 2020-10-27 {
     description
-      "Third revision -02 version";
+      "Initial version.";
     reference
       "RFC XXXX: A Layer 2 VPN Network YANG Model.";
   }
